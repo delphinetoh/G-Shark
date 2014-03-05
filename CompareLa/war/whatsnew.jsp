@@ -185,7 +185,7 @@ h3 {
         <li><a href="../whatsnew.jsp" class="ui-btn-active" data-icon="star">What's New</a></li>
         <li><a href="../search.jsp" rel="external" data-icon="search">Search</a></li>
         <li><a href="../snap.jsp" rel="external" data-icon="camera">Snap</a></li>
-        <li><a href="../compare.jsp" data-icon="check">Compare</a></li>
+        <li><a href="../compare.html" data-icon="check">Compare</a></li>
       </ul>
     </div>
   </div>
