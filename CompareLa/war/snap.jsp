@@ -41,7 +41,7 @@ h3 {
 
 <div data-role="header" data-position="inline">
 	<a href="../../" data-icon="camera" data-iconpos="notext">Logo</a>
-    <h1>Search Item</h1>
+    <h1>Snap It!</h1>
 </div>
 
   <div data-role="main" class="ui-content">
@@ -51,7 +51,7 @@ h3 {
 	<br>
 	<center><img src="../images/camera.png" height="70" width="70"></center>
 	<br>
-	<form>
+	<form action="../searchresults.jsp">
 		<input type="file" accept="image/*;capture=camera">
 		<br>
 		<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Search</button>

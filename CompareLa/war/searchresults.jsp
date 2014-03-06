@@ -59,16 +59,15 @@ iframe {
 <%--header--%>
 
 <div data-role="header">
-	<h1>Search Result</h1>
+	<h1>Search Results</h1>
 </div>
-<h4 align="center">Search Results for Shirts</h4>
-<p>List of Shirts available</p>
+<h4 align="center">Search Results for <u>Ralph Lauren Polo</u></h4>
 
 <%--Products--%>
 <br>
 <div class="ui-grid-a">
 	<div class="ui-block-a">
-		<img src="../products/ralph_lauren4.jpg" border="1"><p>Red Ralph Lauren<br>SGD30</p>
+		<img src="../products/ralph_lauren4.jpg" border="1"><p>Red Ralph Lauren<br>SGD169</p>
 		<div class="ui-grid-b">
 			<div class="ui-block-a">
 				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
@@ -80,7 +79,7 @@ iframe {
 				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
 			</div>
 		</div>			
-		<img src="../products/ralph_lauren1.jpg" border="1"><p>Blue Ralph Lauren<br>SGD129</p>
+		<img src="../products/ralph_lauren1.jpg" border="1"><p>Blue Ralph Lauren<br>SGD169</p>
 		<div class="ui-grid-b">
 			<div class="ui-block-a">
 				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
@@ -94,7 +93,7 @@ iframe {
 		</div>
 	</div>
 	<div class="ui-block-b">
-		<img src="../products/ralph_lauren2.jpg" border="1"><p>Grey Ralph Lauren<br>SGD25</p>
+		<img src="../products/ralph_lauren2.jpg" border="1"><p>Grey Ralph Lauren<br>SGD169</p>
 		<div class="ui-grid-b">
 			<div class="ui-block-a">
 				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
@@ -106,7 +105,7 @@ iframe {
 				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
 			</div>
 		</div>
-		<img src="../products/ralph_lauren3.jpg" border="1"><p>Green Ralph Lauren<br>SGD49</p>
+		<img src="../products/ralph_lauren3.jpg" border="1"><p>Green Ralph Lauren<br>SGD169</p>
 		<div class="ui-grid-b">
 		<div class="ui-grid-b">
 			<div class="ui-block-a">

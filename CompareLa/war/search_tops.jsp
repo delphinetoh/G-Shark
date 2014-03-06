@@ -37,6 +37,14 @@ h3 {
 
 <div data-role="page">
 
+<%
+String fromSearch = (String) session.getAttribute("fromSearch");
+session.removeAttribute("fromSearch");
+if (fromSearch != null && fromSearch.equals("true")) { %>
+	<meta http-equiv="refresh" content="0; url=../search_tops.jsp" />
+<% }
+%>
+
 <%--header--%>
 
 <div data-role="header" data-position="inline" data-position="fixed">
@@ -58,7 +66,7 @@ h3 {
 		        </ul>
 		    </div>
 		    <div id="her" class="ui-content">
-				<form>
+				<form action="../searchresults.jsp">
 					<div style="padding:10px 20px;">
 	                    <div data-role="rangeslider" data-mini="true">
 	                        <label for="range-1a">Price:</label>
@@ -87,7 +95,7 @@ h3 {
 			    </form>
 		    </div>
 		    <div id="him" class="ui-content">
-		        <form>
+		        <form action="../searchresults.jsp">
 					<div style="padding:10px 20px;">
 	                    <div data-role="rangeslider" data-mini="true">
 	                        <label for="range-1a-him">Price:</label>

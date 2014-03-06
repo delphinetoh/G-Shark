@@ -75,7 +75,7 @@ h3 {
 
 <div data-role="header" data-position="fixed">
 	<a href="../../" data-icon="star" data-iconpos="notext">Logo</a>
-	<h1>What's New</h1>
+	<h1>What's New?</h1>
 </div>
 
 <%--ForHimForHerTab--%>
@@ -168,10 +168,10 @@ h3 {
 	</div>
 	<div class="ui-block-a">
 		<img src="../products/female_bag2.jpg" border="1"><p>Anchor Duffle Bag<br>SGD79</p>
-		<img src="../products/female_watch1.jpg" border="1"><p>River Island Quilted Bag<br>SGD55</p>
+		<img src="../products/female_watch1.jpg" border="1"><p>Marc Jacobs Watch<br>SGD55</p>
 	</div>
 	<div class="ui-block-b">
-		<img src="../products/female_bag1.jpg" border="1"><p>Marc Jacobs Watch<br>SGD259</p>
+		<img src="../products/female_bag1.jpg" border="1"><p>River Island Quilted Bag<br>SGD259</p>
 		<img src="../products/female_watch2.jpg" border="1"><p>Tommy Hilfiger Watch<br>SGD230</p>
 	</div>	
 </div>
