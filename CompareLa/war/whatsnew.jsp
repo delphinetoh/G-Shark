@@ -8,7 +8,7 @@
 
 <style>
 .ui-grid-a img{
-    width  : 75%;
+    width  : 100%;
     height : auto;
     display: block;
     margin-left: auto;
@@ -23,9 +23,6 @@
     margin-right: auto;
 }
 
-.ui-grid-solo p {
-    text-align: left
-}
 
 .ui-grid-a p {
 	text-align: center
@@ -39,8 +36,8 @@
 
 p {
 	text-align:center;
-	font-weight:bold;
 	font-size: 12px;
+	font-family:Century Gothic;
 }
 
 h3 {
@@ -51,6 +48,7 @@ h3 {
 .ui-li-static.ui-collapsible > .ui-collapsible-heading {
     margin: 0;
 }
+
 .ui-li-static.ui-collapsible {
     padding: 0;
 }
@@ -59,10 +57,8 @@ h3 {
     border-top-width: 0;
 }
 
-.ui-li-static.ui-collapsible > .ui-collapsible-heading.ui-collapsible-heading-collapsed > .ui-btn,
-.ui-li-static.ui-collapsible > .ui-collapsible-content {
-    border-bottom-width: 0;
-}
+
+
 
 </style>
 
@@ -72,25 +68,28 @@ h3 {
 <div data-role="page">
 
 <%--header--%>
+<div data-role="page" id="pageone">
 
-<div data-role="header" data-position="fixed">
-	<a href="../../" data-icon="star" data-iconpos="notext">Logo</a>
-	<h1>What's New?</h1>
+<div data-role="header">
+	<a href="#pagetwo" data-icon="bars" data-iconpos="notext" data-transition="fade" >Bars</a>
+	<a href="#pageone" data-icon="heart" data-iconpos="notext" data-transition="fade" >Bars</a>
+	<h1>What's New</h1>
 </div>
+
+
+
+
 
 <%--ForHimForHerTab--%>
 <div data-theme="a" class="ui-corner-all">
-	  	<div data-role="tabs">
-		    <div data-role="navbar">
-		        <ul>
-		          <li><a href="#her" data-theme="a" data-ajax="false" class="ui-btn-active">For Her</a></li>
-		          <li><a href="#him" data-theme="a" data-ajax="false">For Him</a></li>
-		        </ul>
-		    </div>
-		 </div>
-</div>
-
-
+	<div data-role="tabs">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#her" data-theme="a" data-ajax="false" class="ui-btn-active">For Her</a></li>
+				<li><a href="#him" data-theme="a" data-ajax="false">For Him</a></li>
+			</ul>
+	</div>
+		    
 <%--PreferenceBar--%>
 <ul data-role="listview" data-inset="true" data-shadow="false">
 	<li data-role="collapsible" data-iconpos="right" data-inset="false">
@@ -109,86 +108,149 @@ h3 {
 		</form>
 	</li>
 </ul>
+				    		    
+<%--ForHerTab-Multiple--%>
+		    <div id="her" class="ui-content">	
+				<form>
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<img src="../products/KineticWithRetrogradeDayIndicator.jpg"><p>Day Indicator</p>
+							<div class="ui-grid-b">
+								<div class="ui-block-a">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
+								</div>
+								<div class="ui-block-b">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
+								</div>
+								<div class="ui-block-c">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
+								</div>
+							</div>
+							<img src="../products/SeikoKineticDirectDrive.jpg"><p>Direct Drive</p>
+							<div class="ui-grid-b">
+								<div class="ui-block-a">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
+								</div>
+								<div class="ui-block-b">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
+								</div>
+								<div class="ui-block-c">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
+								</div>
+							</div>								
+						</div>
+						<div class="ui-block-b">
+							<img src="../products/KineticPerpetal.jpg"><p>Seiko Kinectic Perpetal<br></p>
+							<div class="ui-grid-b">
+								<div class="ui-block-a">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
+								</div>
+								<div class="ui-block-b">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
+								</div>
+								<div class="ui-block-c">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
+								</div>
+							</div>
+							<img src="../products/BigDateCalendar.jpg"><p>Seiko Big DateCalendar<br></p>
+							<div class="ui-grid-b">
+								<div class="ui-block-a">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
+								</div>
+								<div class="ui-block-b">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
+								</div>
+								<div class="ui-block-c">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
+								</div>
+							</div>
+						</div>	
+					</div>
+			    </form>
+		    </div>
+<%--ForHimTab-Multiple--%>
+		    <div id="him" class="ui-content">
+				<form>
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<img src="../products/KineticWithRetrogradeDayIndicator.jpg"><p>DayDay Indicator</p>
+							<div class="ui-grid-b">
+								<div class="ui-block-a">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
+								</div>
+								<div class="ui-block-b">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
+								</div>
+								<div class="ui-block-c">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
+								</div>
+							</div>
+							<img src="../products/SeikoKineticDirectDrive.jpg"><p>Direct Drive</p>
+							<div class="ui-grid-b">
+								<div class="ui-block-a">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
+								</div>
+								<div class="ui-block-b">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
+								</div>
+								<div class="ui-block-c">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
+								</div>
+							</div>								
+						</div>
+						<div class="ui-block-b">
+							<img src="../products/KineticPerpetal.jpg"><p>Seiko Kinectic Perpetal<br></p>
+							<div class="ui-grid-b">
+								<div class="ui-block-a">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
+								</div>
+								<div class="ui-block-b">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
+								</div>
+								<div class="ui-block-c">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
+								</div>
+							</div>
+							<img src="../products/BigDateCalendar.jpg"><p>Seiko DateCalendar<br></p>
+							<div class="ui-grid-b">
+								<div class="ui-block-a">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
+								</div>
+								<div class="ui-block-b">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
+								</div>
+								<div class="ui-block-c">
+									<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
+								</div>
+							</div>
+						</div>	
+					</div>
+			    </form>
+		    </div>
+    	</div>
+</div>
+
+
+</div>
+
+
+<div data-role="page" id="pagetwo">
+</div>
+
 <%--Products--%>
 <br>
-<div class="ui-grid-a">
-	<div class="ui-block-a">
-		<img src="../products/female_top1.jpg" border="1"><p>Mango Knitted Cardigan<br>SGD30</p>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
-			</div>
-		</div>			
-		<img src="../products/female_bottom1.jpg" border="1"><p>Levi's Jeans<br>SGD129</p>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
-			</div>
-		</div>
-	</div>
-	<div class="ui-block-b">
-		<img src="../products/female_top2.jpg" border="1"><p>ASOS Tshirt in Stripes<br>SGD25</p>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
-			</div>
-		</div>
-		<img src="../products/female_bottom2.jpg" border="1"><p>Topshop Denim Shorts<br>SGD49</p>
-		<div class="ui-grid-b">
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="index.html" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Delete</a>				
-			</div>
-		</div>
-		</div>
-	</div>
-	<div class="ui-block-a">
-		<img src="../products/female_bag2.jpg" border="1"><p>Anchor Duffle Bag<br>SGD79</p>
-		<img src="../products/female_watch1.jpg" border="1"><p>Marc Jacobs Watch<br>SGD55</p>
-	</div>
-	<div class="ui-block-b">
-		<img src="../products/female_bag1.jpg" border="1"><p>River Island Quilted Bag<br>SGD259</p>
-		<img src="../products/female_watch2.jpg" border="1"><p>Tommy Hilfiger Watch<br>SGD230</p>
-	</div>	
-</div>
-	
-	
 
-<%--footer--%>
   <div data-role="footer" data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="../whatsnew.jsp" class="ui-btn-active" data-icon="star">What's New</a></li>
+        <li><a href="../whatsnew.jsp" rel="external" data-icon="star" class="ui-btn-active">What's New</a></li>
         <li><a href="../search.jsp" rel="external" data-icon="search">Search</a></li>
         <li><a href="../snap.jsp" rel="external" data-icon="camera">Snap</a></li>
         <li><a href="../compare.html" data-icon="check">Compare</a></li>
       </ul>
     </div>
   </div>
-</div> 
+
+</div>
 </body>
 </html>
