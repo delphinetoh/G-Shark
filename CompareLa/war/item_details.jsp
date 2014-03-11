@@ -170,10 +170,14 @@
 				<h1>
 					<div data-role="navbar">
 						<ul>
-							<li><a href="#" data-icon="star">What's New</a></li>
-							<li><a href="search.jsp" rel="external" data-icon="search">Search</a></li>
-							<li><a href="snap.jsp" rel="external" class="ui-btn-active" data-icon="camera">Snap</a></li>
-							<li><a href="#" data-icon="check">Compare</a></li>
+							<li><a href="../whatsnew.jsp?check=true" rel="external" data-icon="star">What's New</a>
+				            </li>
+				            <li><a href="../search.jsp" rel="external" data-icon="search">Search</a>
+				            </li>
+				            <li><a href="../snap.jsp" rel="external" data-icon="camera">Snap</a>
+				            </li>
+				            <li><a href="../compare.html" rel="external" data-icon="check">Compare</a>
+				            </li>
 						</ul>
 					</div>
 				
