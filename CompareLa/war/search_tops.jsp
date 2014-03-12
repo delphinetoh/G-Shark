@@ -6,7 +6,7 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
 
-<style>
+<style type="text/css">
 .ui-content {
 	padding:0;
 }
@@ -49,6 +49,10 @@ if (fromSearch != null && fromSearch.equals("true")) { %>
 <% }
 %>
 
+ <%
+session.setAttribute("check","true");
+%>
+
 <%--header--%>
 
 <div data-role="header" data-position="inline" data-position="fixed">
@@ -70,7 +74,7 @@ if (fromSearch != null && fromSearch.equals("true")) { %>
 		        </ul>
 		    </div>
 		    <div id="her" class="ui-content">
-				<form action="../searchresults.jsp">
+				<form action="../searchresults.jsp?check=true">
 					<div style="padding:10px 20px;">
 	                    <div data-role="rangeslider" data-mini="true">
 	                        <label for="range-1a">Price:</label>

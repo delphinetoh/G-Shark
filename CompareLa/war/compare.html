@@ -11,7 +11,34 @@
   h3 {display:none;}
   h4 {display:none;}
   h5 {display:none;}
- </style>
+  
+.ui-grid-b img {
+    width: 90%;
+    height: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ui-grid-b div {
+    width: 75%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-grid-b>.ui-block-a, .ui-grid-b>.ui-block-b, .ui-grid-b>.ui-block-c {
+	width: 33.333%;
+	height: 103px;
+}
+
+p {
+    font-size: 12px;
+    font-family: Century Gothic;
+}
+
+        
+</style>
 
 <script>
 
@@ -27,20 +54,24 @@ $("document").ready(function() {
 function myYellow()
 {
 	
-	document.getElementById('img1').src="category-images/bag.png";
+	document.getElementById('img1').src="../products/female_top1.png";
+	document.getElementById('first_1').src="../products/female_top1_selected.png";
 	$("h4").show();
 
 }
 
 function myBlue()
 {
-	document.getElementById('img2').src="category-images/bottoms.png";
+	document.getElementById('img2').src="../products/female_top2.png";
+	document.getElementById('second_1').src="../products/female_top2_selected.png";
 	$("h5").show();
 }
-function close1()
-{
+
+
+function close1(){
 
 }
+
 function compare()
 {
 	
@@ -80,22 +111,22 @@ function HighlightBorder()
 
        
           	<div class="ui-block-a">
-				 <button id ="main1" type="button"  data-theme="a" style="height: 150px; width: 110px; margin-top: 0em;margin-left: 1.2em;"><img id="img1" img alt="" src="category-images/Question-Mark-Icon.png" style="width: 70px; height: 70px" /></button></div>
+				 <img id="img1" img alt="" src="../images/question-mark.png" border="1" style="height: 150px; width: 110px; margin-top: 0em;margin-left: 1.2em;" />
           	</div>
 
  			<div class="ui-block-b">
 			 	<h4>
-					 <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 35px; height: 40px;top:-20px;left:12px"><img alt="" src="category-images/arrow4.png" style="width: 20px; height: 20px" /></button>
+					 <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 35px; height: 40px;top:-20px;left:7px"><img alt="" src="../images/arrow4.png" style="width: 20px; height: 20px" /></button>
  				</h4>            
  			</div>
               
           	<div class="ui-block-c">
-			    <button id ="main2" type="button" data-theme="a" style="height: 150px; width: 110px; margin-top: 0em;margin-left: 2.0em;"><img id="img2"  img alt="" src="category-images/Question-Mark-Icon.png" style="width: 70px; height: 70px" /></button></div>
+          		<img id="img2" img alt="" src="../images/question-mark.png" border="1" style="height: 150px; width: 110px; margin-top: 0em;margin-left: 3.4em;" />
 			</div>
 				 
 			<div class="ui-block-d">
 				<h5>
-			 		 <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 35px; height: 40px;top:-20px;left:25px"><img alt="" src="category-images/arrow4.png" style="width: 20px; height: 20px" /></button>
+			 		 <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 35px; height: 40px;top:-20px;left:29px"><img alt="" src="../images/arrow4.png" style="width: 20px; height: 20px" /></button>
                  </h5>
  			</div>
 	</fieldset>
@@ -103,43 +134,40 @@ function HighlightBorder()
  
 		
 <h2>		<!--Compare Button-->
-			<button id ="first" type="button" onclick="compare()" style="top:-15px" >Compare</button> 
+			<button id ="first" type="button" data-mini="true" onclick="compare()" style="top:-15px;width:90%;margin-left:auto;margin-right:auto;">Compare</button> 
 		     
 	<!--Images of Items-->
-	<fieldset class="ui-grid-b">
-
-                <div class="ui-block-a">
-        	        <button id ="first" type="button" onclick="myYellow()" style="width: 90px; height: 80px;left:15px"><img alt="" src="category-images/bag.png" style="width: 60px; height: 60px;" /></button> 
-					<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-105px;left:75px"><img alt="" src="category-images/close-button.png" style="width: 20px; height: 20px" /></button>
-                </div>
-
-                <div class="ui-block-b">
-					 <button id ="second" type="button" onclick="myBlue()" style="width: 90px; height: 80px;left:10px"><img alt="" src="category-images/bottoms.png" style="width: 60px; height: 60px" /></button></button> 
-                     <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-105px;left:70px"><img alt="" src="category-images/close-button.png" style="width: 20px; height: 20px" /></button>  
-                </div>
-
-                <div class="ui-block-c">
-					 <button id ="third" type="button" style="width: 90px; height: 80px;left:5px"><img alt="" src="category-images/cap.png" style="width: 60px; height: 60px" /></button>
-                 	 <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-105px;left:65px"><img alt="" src="category-images/close-button.png" style="width: 20px; height: 20px" /></button>
-                </div>
-
-                <div class="ui-block-a">
-					<button id ="forth" type="button" style="width: 90px; height: 80px;top:-40px;left:15px"><img alt="" src="category-images/footwear.png" style="width: 60px; height: 60px" /></button>
-                    <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-145px;left:75px"><img alt="" src="category-images/close-button.png" style="width: 20px; height: 20px" /></button>
-                </div>
-
-                <div class="ui-block-b">
-					<button id ="fifth" type="button" style="width: 90px; height: 80px;top:-40px;left:10px"><img alt="" src="category-images/top.png" style="width: 60px; height: 60px" /></button>
-                    <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-145px;left:70px"><img alt="" src="category-images/close-button.png" style="width: 20px; height: 20px" /></button>
-                </div>
-
-                <div class="ui-block-c">
-					<button id ="sixth" type="button" style="width: 90px; height: 80px;top:-40px;left:5px"><img alt="" src="category-images/watch.png" style="width: 60px; height: 60px" /></button>
-                	<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-145px;left:65px"><img alt="" src="category-images/close-button.png" style="width: 20px; height: 20px" /></button>
-                </div>
-
-	</fieldset>
-					
+	<div class="ui-grid-b">
+		<div class="ui-block-a">
+			<img id="first_1" onclick="myYellow()" alt="" src="../products/female_top1.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/> 
+			<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:62px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>
+		</div>
+		
+		<div class="ui-block-b">
+			<img id="second_1" onclick="myBlue()" alt="" src="../products/female_top2.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/>
+		    <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:62px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>  
+		</div>
+		
+		<div class="ui-block-c">
+			<img alt="" src="../products/female_bottom1.png" border="1" style="width: 90px; height: 95px;margin-left:8px" />
+		 	<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:62px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>
+		</div>
+	</div>
+	<div class="ui-grid-b">
+		<div class="ui-block-a">
+			<img alt="" src="../products/female_bag2.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/> 
+			<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:62px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>
+		</div>
+		
+		<div class="ui-block-b">
+			<img alt="" src="../products/male_bottoms2.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/>
+		    <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:62px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>  
+		</div>
+		
+		<div class="ui-block-c">
+			<img alt="" src="../images/add-item.png" border="1" style="width: 90px; height: 95px;margin-left:8px" />
+		</div>
+	</div>	
 
 
 
@@ -148,34 +176,59 @@ function HighlightBorder()
 
 <h3>
 		<!--Show List Button-->
-		<button id ="first" type="button" onclick="showItems()" style="top:-15px" >Show List</button> 
+		<button id ="first" type="button" data-mini="true" onclick="showItems()" style="top:-15px;width:90%;margin-left:auto;margin-right:auto;">Show List</button> 
 
-		<!--Criteria buttons-->
+		<!-- Criteria buttons -->
   	 	<button type="button" style="font-size:10px; background-color:yellow; width: 60px; height: 30px;position:absolute;top:310px;left:135px">Price</button> 
     	<button type="button" style="font-size:10px; background-color:yellow; width: 60px; height: 30px;position:absolute;top:350px;left:135px">Location</button>
    		<button type="button" style="font-size:10px; background-color:yellow; width: 60px; height: 30px;position:absolute;top:390px;left:135px">Stock</button>
      	<button type="button" style="font-size:10px; background-color:yellow; width: 60px; height: 30px;position:absolute;top:430px;left:135px">Likes</button>
        	<button type="button" style="font-size:10px; background-color:yellow; width: 60px; height: 30px;position:absolute;top:470px;left:135px">Review</button>
+    	
+    	
+    <!-- Test
+    <div class="ui-grid-b-1">
+	    <div class="ui-block-a-1"><div class="ui-bar ui-bar-a" style="height:60px">SGD25</div></div>
+	    <div class="ui-block-b-1"><div class="ui-bar ui-bar-a" style="height:60px">Price</div></div>
+	    <div class="ui-block-c-1"><div class="ui-bar ui-bar-a" style="height:60px">SGD30</div></div>
+	    
+	    <div class="ui-block-a-1"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+	    <div class="ui-block-b-1"><div class="ui-bar ui-bar-a" style="height:60px">Location</div></div>
+	    <div class="ui-block-c-1"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+	    
+	    <div class="ui-block-a-1"><div class="ui-bar ui-bar-a" style="height:60px">20</div></div>
+	    <div class="ui-block-b-1"><div class="ui-bar ui-bar-a" style="height:60px">Stock</div></div>
+	    <div class="ui-block-c-1"><div class="ui-bar ui-bar-a" style="height:60px">10</div></div>
+	    
+	   	<div class="ui-block-a-1"><div class="ui-bar ui-bar-a" style="height:60px">154</div></div>
+	    <div class="ui-block-b-1"><div class="ui-bar ui-bar-a" style="height:60px">Likes</div></div>
+	    <div class="ui-block-c-1"><div class="ui-bar ui-bar-a" style="height:60px">120</div></div>
+	    
+	    <div class="ui-block-a-1"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+	    <div class="ui-block-b-1"><div class="ui-bar ui-bar-a" style="height:60px">Reviews</div></div>
+	    <div class="ui-block-c-1"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+	</div>
+	-->
     
     <!--Details of Comparison 1-->
-     <b style="font-size:15px;position:absolute;top:320px;left:50px">$32.14</b>
+     <b style="font-size:15px;position:absolute;top:320px;left:50px">SGD32.14</b>
      <div data-role="collapsible" style="font-size:12px ;width: 113px; height: 1px;position:absolute;top:347px;left:15px" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-mini="true">
     	<h4>Northpoint</h4>Plaza Sing<br>Ion
 	 </div>
      <b style="font-size:15px;position:absolute;top:400px;left:62px">220</b>
      <b style="font-size:15px;position:absolute;top:440px;left:62px">220</b>
-     <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 80px; height: 40px;position:absolute;top:457px;left:25px"><img alt="" src="category-images/1-star.png" style="width: 65px; height: 25px" /></button>
+     <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 80px; height: 40px;position:absolute;top:457px;left:25px"><img alt="" src="../images/1-star.png" style="width: 65px; height: 25px" /></button>
     
     
     <!--Details of Comparison 2-->
-      <b style="font-size:15px;position:absolute;top:320px;left:225px">$101.35</b>
+      <b style="font-size:15px;position:absolute;top:320px;left:225px">SGD101.35</b>
       <div data-role="collapsible" style="font-size:12px ;width: 113px; height: 1px;position:absolute;top:347px;left:200px" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-mini="true">
     	<h4>Northpoint</h4>Plaza Sing<br>Ion
       </div>
      <b style="font-size:15px;position:absolute;top:400px;left:245px">34</b>
      <b style="font-size:15px;position:absolute;top:440px;left:245px">22</b>
-     <button type="button" onclick="close1()"  style="background-color: rgba(10, 0, 0, 0);border: none; box-shadow: none; width: 80px; height: 40px;position:absolute;top:457px;left:210px"><img alt="" src="category-images/3-star.png" style="width: 65px; height: 25px" /></button>
-      
+     <button type="button" onclick="close1()"  style="background-color: rgba(10, 0, 0, 0);border: none; box-shadow: none; width: 80px; height: 40px;position:absolute;top:457px;left:210px"><img alt="" src="../images/3-star.png" style="width: 65px; height: 25px" /></button>
+
 </h3>
 
   <div data-role="footer" data-position="fixed">
