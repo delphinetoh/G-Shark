@@ -103,7 +103,7 @@ session.setAttribute("check","true");
 			    </form>
 		    </div>
 		    <div id="him" class="ui-content">
-		        <form action="../searchresults.jsp">
+		        <form action="../searchresults.jsp?check=true">
 					<div style="padding:10px 20px;">
 	                    <div data-role="rangeslider" data-mini="true">
 	                        <label for="range-1a-him">Price:</label>

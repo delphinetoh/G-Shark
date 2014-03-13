@@ -33,13 +33,13 @@
         .ui-add-icon-left {
         	position: absolute;
 			float: left;
-			left: 117px;
+			left: 119px;
         }
         
        .ui-add-icon-right {
         	position: absolute;
 			float: left;
-			left: 275px;
+			left: 277px;
         }
         
         #popupForm-popup {
@@ -85,7 +85,7 @@ if (check != null && check.equals("true")) {
 <%--header--%>
 
 <div data-role="header" data-position="fixed">
-	<a href="#pagetwo" data-icon="star" data-iconpos="notext" data-transition="fade">Bars</a>
+	<a href="#" data-icon="star" data-iconpos="notext" data-transition="fade">Bars</a>
 	<a href="../whatsnew_bars.jsp?check=true" data-icon="bars" data-iconpos="notext" data-transition="fade">Bars</a>
 	<h1>What's New</h1>
 </div>

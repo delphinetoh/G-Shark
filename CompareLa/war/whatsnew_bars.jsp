@@ -85,7 +85,7 @@ if (check != null && check.equals("true")) {
 <%--header--%>
 
 <div data-role="header" data-position="fixed">
-	<a href="#pagetwo" data-icon="star" data-iconpos="notext" data-transition="fade">Bars</a>
+	<a href="#" data-icon="star" data-iconpos="notext" data-transition="fade">Bars</a>
 	<a href="../whatsnew.jsp?check=true" data-icon="grid" data-iconpos="notext" data-transition="fade">Bars</a>
 	<h1>What's New</h1>
 </div>

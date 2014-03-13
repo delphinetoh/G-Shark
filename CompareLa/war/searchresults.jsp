@@ -71,14 +71,13 @@
 </head>
 <body>
 
-<%--
+<%
 String check = (String) request.getParameter("check");
 if (check != null && check.equals("true")) { 
 %>
-	<meta http-equiv="refresh" content="0; url="../searchresults.jsp" />
+	<meta http-equiv="refresh" content="0; url=../searchresults.jsp" />
 
-<%}
---%>
+<%}%>
 
 <%--header--%>
 <div data-role="header" data-position="inline" data-position="fixed">
@@ -107,7 +106,7 @@ if (check != null && check.equals("true")) {
 		<div class="ui-add-icon-left" style="position:absolute; right:5px;">
 			<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
 		</div>
-		<img src="../products/ralph_lauren4.png" border="1"><p>Red Ralph Lauren<br>SGD169</p>
+		<a href="../item_details.jsp"><img src="../products/ralph_lauren4.png" border="1"></a><p>Red Ralph Lauren<br>SGD169</p>
 		
 		<div class="ui-add-icon-left" style="position:absolute; right:5px;">
 			<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				

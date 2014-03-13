@@ -47,7 +47,7 @@ h3 {
 <%--header--%>
 
 <div data-role="header" data-position="inline" data-position="fixed">
-	<a href="../../" data-icon="search" data-iconpos="notext">Logo</a>
+	<a href="#" data-icon="search" data-iconpos="notext">Logo</a>
     <h1>Search Item</h1>
 </div>
 
@@ -56,11 +56,12 @@ h3 {
   <div data-role="main" class="ui-content">
     <p>
     	<ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search using keywords" data-mini="true">
-		    <li><a href="#">Nike</a></li>
-		    <li><a href="#">Nike T-shirt</a></li>
-		    <li><a href="#">Nike Watch</a></li>
+		    <li><a href="../searchresults.jsp?check=true">Ralph Lauren Polo</a></li>
+		    <li><a href="#">Ralph Lauren Long Sleeved</a></li>
+		    <li><a href="#">Ralph Lauren Messenger Bag</a></li>
 		    <li><a href="#">G-Shock Watch</a></li>
 		    <li><a href="#">Seiko Watch</a></li>
+		    <li><a href="#">Fossil Watch</a></li>
 		</ul>
     </p>
     

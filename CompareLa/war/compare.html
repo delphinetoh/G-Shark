@@ -29,7 +29,7 @@
 
 .ui-grid-b>.ui-block-a, .ui-grid-b>.ui-block-b, .ui-grid-b>.ui-block-c {
 	width: 33.333%;
-	height: 103px;
+	height: 105px;
 }
 
 p {
@@ -57,6 +57,7 @@ function myYellow()
 	document.getElementById('img1').src="../products/female_top1.png";
 	document.getElementById('first_1').src="../products/female_top1_selected.png";
 	$("h4").show();
+	$("cross1").hide();
 
 }
 
@@ -65,7 +66,25 @@ function myBlue()
 	document.getElementById('img2').src="../products/female_top2.png";
 	document.getElementById('second_1').src="../products/female_top2_selected.png";
 	$("h5").show();
+	$("cross2").hide();
 }
+
+function removeFirst()
+{
+	document.getElementById('img1').src="../images/question-mark.png";
+	document.getElementById('first_1').src="../products/female_top1.png";
+	$("h4").hide();
+	$("cross1").show();
+}
+
+function removeSecond()
+{
+	document.getElementById('img2').src="../images/question-mark.png";
+	document.getElementById('second_1').src="../products/female_top2.png";
+	$("h5").hide();
+	$("cross2").show();
+}
+
 
 
 function close1(){
@@ -77,14 +96,15 @@ function compare()
 	
 	$("h2").hide();
 	$("h3").show();
-	HighlightBorder();
+	document.getElementById("img1").style.borderColor="green";
+	document.getElementById("img1").style.borderWidth="thick";	
 }
 function showItems()
 {
 	$("h3").hide();
 	$("h2").show();
-	document.getElementById("main1").style.borderColor='transparent';
-	document.getElementById("main2").style.borderColor='transparent';
+	document.getElementById("img1").style.borderColor="black";
+	document.getElementById("img1").style.borderWidth="thin"
 }
 
 function HighlightBorder()
@@ -98,10 +118,12 @@ function HighlightBorder()
 
 </head>
 <body>
-<!--header-->
-<div data-role="header">
-    <h1>Compare</h1>
-  </div>
+
+<!--header-->  
+<div data-role="header" data-position="inline" data-position="fixed">
+	<a href="#" data-icon="check" data-iconpos="notext"></a>
+    <h1>Compare Items</h1>
+</div>
 
 
 
@@ -116,7 +138,7 @@ function HighlightBorder()
 
  			<div class="ui-block-b">
 			 	<h4>
-					 <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 35px; height: 40px;top:-20px;left:7px"><img alt="" src="../images/arrow4.png" style="width: 20px; height: 20px" /></button>
+					 <button type="button" onclick="removeFirst()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 35px; height: 40px;top:-20px;left:7px"><img alt="" src="../images/arrow4.png" style="width: 20px; height: 20px" /></button>
  				</h4>            
  			</div>
               
@@ -126,7 +148,7 @@ function HighlightBorder()
 				 
 			<div class="ui-block-d">
 				<h5>
-			 		 <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 35px; height: 40px;top:-20px;left:29px"><img alt="" src="../images/arrow4.png" style="width: 20px; height: 20px" /></button>
+			 		 <button type="button" onclick="removeSecond()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 35px; height: 40px;top:-20px;left:29px"><img alt="" src="../images/arrow4.png" style="width: 20px; height: 20px" /></button>
                  </h5>
  			</div>
 	</fieldset>
@@ -140,12 +162,16 @@ function HighlightBorder()
 	<div class="ui-grid-b">
 		<div class="ui-block-a">
 			<img id="first_1" onclick="myYellow()" alt="" src="../products/female_top1.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/> 
-			<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:62px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>
+			<cross1>
+				<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:62px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>
+			</cross1>
 		</div>
 		
 		<div class="ui-block-b">
 			<img id="second_1" onclick="myBlue()" alt="" src="../products/female_top2.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/>
-		    <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:62px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>  
+		    <cross2>
+		    	<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:62px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>  
+			</cross2>
 		</div>
 		
 		<div class="ui-block-c">
@@ -211,23 +237,23 @@ function HighlightBorder()
 	-->
     
     <!--Details of Comparison 1-->
-     <b style="font-size:15px;position:absolute;top:320px;left:50px">SGD32.14</b>
+     <b style="font-size:15px;position:absolute;top:320px;left:50px">SGD25</b>
      <div data-role="collapsible" style="font-size:12px ;width: 113px; height: 1px;position:absolute;top:347px;left:15px" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-mini="true">
     	<h4>Northpoint</h4>Plaza Sing<br>Ion
 	 </div>
-     <b style="font-size:15px;position:absolute;top:400px;left:62px">220</b>
+     <b style="font-size:15px;position:absolute;top:400px;left:62px">53</b>
      <b style="font-size:15px;position:absolute;top:440px;left:62px">220</b>
-     <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 80px; height: 40px;position:absolute;top:457px;left:25px"><img alt="" src="../images/1-star.png" style="width: 65px; height: 25px" /></button>
+     <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 80px; height: 40px;position:absolute;top:457px;left:25px"><img alt="" src="../images/3-star.png" style="width: 65px; height: 25px" /></button>
     
     
     <!--Details of Comparison 2-->
-      <b style="font-size:15px;position:absolute;top:320px;left:225px">SGD101.35</b>
+      <b style="font-size:15px;position:absolute;top:320px;left:225px">SGD30</b>
       <div data-role="collapsible" style="font-size:12px ;width: 113px; height: 1px;position:absolute;top:347px;left:200px" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-mini="true">
     	<h4>Northpoint</h4>Plaza Sing<br>Ion
       </div>
      <b style="font-size:15px;position:absolute;top:400px;left:245px">34</b>
      <b style="font-size:15px;position:absolute;top:440px;left:245px">22</b>
-     <button type="button" onclick="close1()"  style="background-color: rgba(10, 0, 0, 0);border: none; box-shadow: none; width: 80px; height: 40px;position:absolute;top:457px;left:210px"><img alt="" src="../images/3-star.png" style="width: 65px; height: 25px" /></button>
+     <button type="button" onclick="close1()"  style="background-color: rgba(10, 0, 0, 0);border: none; box-shadow: none; width: 80px; height: 40px;position:absolute;top:457px;left:210px"><img alt="" src="../images/1-star.png" style="width: 65px; height: 25px" /></button>
 
 </h3>
 

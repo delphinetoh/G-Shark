@@ -65,9 +65,13 @@
 			style="line-height:0";
 		}
 		
+		
+		
 		 
 		</style>
 	</head>
+
+>
 	<body>
 
 		<div data-role="page" id="pageone">
@@ -79,22 +83,22 @@
 				<p>
 					<div class="slideshow" data-position="fixed">
 						<div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
-							<div class="image" data-src="../products/rl1.jpg">
+							<div class="image" data-src="../products/rl1.png">
 								<div class="camera_option fadeFromTop">
 									Ivory buttons
 								</div>
 							</div>
-							<div class="image" data-src="../products/rl2.jpg">
+							<div class="image" data-src="../products/rl2.png">
 								<div class="camera_option fadeFromTop">
 									Tailored feel
 								</div>
 							</div>
-							<div class="image" data-src="../products/rl3.jpg">
+							<div class="image" data-src="../products/rl3.png">
 								<div class="camera_option fadeFromBottom">
 									100% cotton
 								</div>
 							</div>
-							<div class="image" data-src="../products/rl4.jpg">
+							<div class="image" data-src="../products/rl4.png">
 								<div class="camera_option fadeFromTop">
 									Slim fit
 								</div>
@@ -111,7 +115,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td class="cell" ><b>Polo Ralph Lauren</b></td>
+							<td class="cell" ><b>Red Ralph Lauren Polo</b></td>
 							
 						</tr>
 						<tr>
@@ -119,14 +123,14 @@
 							
 						</tr>
 						<tr>
-							<td class="cell">USD$85.00</td>
+							<td class="cell">SGD169</td>
 
 						</tr>
 						<tr>
 							<td>
 								<fieldset id="locSelection" class="ui-field-contain" style="height:36px">
 									
-									<select name="location" id="loc">
+									<select name="location" id="loc" data-mini="true">
 										<optgroup label="Central">
 											<option value="mon">Paragon</option>
 											<option value="tue">Plaza Singapura</option>
@@ -167,7 +171,6 @@
 			</div>
 
 			<div data-role="footer"  data-position="fixed">
-				<h1>
 					<div data-role="navbar">
 						<ul>
 							<li><a href="../whatsnew.jsp?check=true" rel="external" data-icon="star">What's New</a>
@@ -180,8 +183,6 @@
 				            </li>
 						</ul>
 					</div>
-				
-				</h1>
 			</div>
 		</div> 
 
