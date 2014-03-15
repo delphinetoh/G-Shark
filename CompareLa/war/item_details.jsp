@@ -3,21 +3,13 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" > 
-		<link rel='stylesheet' id='camera-css'  href='camera/css/camera.css' type='text/css' media='all'> 
+		<!-- <link rel='stylesheet' id='camera-css'  href='camera/css/camera.css' type='text/css' media='all'> 
+		 -->
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css">
 		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
-		<script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
-		<script type='text/javascript' src="camera/scripts/camera.min.js"></script>
-		<script type='text/javascript' src="camera/scripts/jquery.easing.1.3.js"></script>
-
-		<script>
-			jQuery(function(){
-				jQuery('#camera_wrap_1').camera(); 
-
-			});
 		
-		</script>
+		
 		<style>
 		h1
 		{
@@ -46,7 +38,14 @@
 		background: green; 
 		color: white;"
 		}
-
+		
+		#smiley
+		{
+			max-width: 500%;
+			height: auto;
+			width: auto\9; 
+		}
+		
 		.slideshow {
 			margin: 0 auto;
 			max-width: 1000px;
@@ -64,14 +63,21 @@
 		{
 			style="line-height:0";
 		}
-		
+		#owl-demo .item{
+		  margin: 3px;
+		}
+		#owl-demo .item img{
+		  display: block;
+		  width: 100%;
+		  height: auto;
+		}
 		
 		
 		 
 		</style>
 	</head>
 
->
+
 	<body>
 
 		<div data-role="page" id="pageone">
@@ -80,25 +86,40 @@
 			</div>
 
 			<div data-role="main" class="ui-content">
+				
+				<img src="products/rl1.png">
+				<!-- 
+				<div id="owl-demo">
+	          
+				  <div class="item"><img src="products/rl1.png"></div>
+				  <div class="item"><img src="products/rl2.png"></div>
+				  <div class="item"><img src="products/rl3.png"></div>
+				  <div class="item"><img src="products/rl4.png"></div>
+
+				 
+				</div>
+				 -->
+			
+				<!-- 
 				<p>
 					<div class="slideshow" data-position="fixed">
 						<div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
-							<div class="image" data-src="../products/rl1.png">
+							<div class="image" data-src="products/rl1.png">
 								<div class="camera_option fadeFromTop">
 									Ivory buttons
 								</div>
 							</div>
-							<div class="image" data-src="../products/rl2.png">
+							<div class="image" data-src="products/rl2.png">
 								<div class="camera_option fadeFromTop">
 									Tailored feel
 								</div>
 							</div>
-							<div class="image" data-src="../products/rl3.png">
+							<div class="image" data-src="products/rl3.png">
 								<div class="camera_option fadeFromBottom">
 									100% cotton
 								</div>
 							</div>
-							<div class="image" data-src="../products/rl4.png">
+							<div class="image" data-src="products/rl4.png">
 								<div class="camera_option fadeFromTop">
 									Slim fit
 								</div>
@@ -106,7 +127,7 @@
 						</div>
 					</div>
 				</p>
-				
+				 -->
 				<table data-role="table" class="ui-responsive" id="detailsTable">
 					<thead>
 						<tr>
@@ -138,11 +159,27 @@
 											<option value="thu">Somerset 313</option>
 											<option value="fri">Friday</option>
 										</optgroup>
+										<optgroup label="North">
+											<option value="sat">Causeway Point</option>
+											<option value="sun">Ang Mo Kio Hub</option>
+										</optgroup>
+										<optgroup label="South">
+											<option value="sat">Vivo City</option>
+											<option value="sun">Queensway Shopping Centre</option>
+										</optgroup>
+										<optgroup label="East">
+											<option value="sat">White Sands</option>
+											<option value="sun">Tampines Mall</option>
+											<option value="sun">Bedok Mall</option>
+										</optgroup>
 										<optgroup label="West">
 											<option value="sat">West Mall</option>
 											<option value="sun">JEM</option>
 											<option value="sun">Westgate</option>
 										</optgroup>
+										
+										
+										
 									</select>
 								</fieldset>
 							</td>
@@ -158,9 +195,23 @@
 					</tbody>
 				</table>
 				
+				<div class="ui-content" >
+					<a id="seeReviewBtn" href="#seeReviews" data-position-to="window" data-transition="pop" data-rel="popup" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">See reviews</a>
+				</div>
+				
+				<div data-role="popup" id="seeReviews" class="ui-content">
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
+					<ul data-role="listview">
+						<li><img id="smiley" src="images/smiley.png">Good stuffs!</li>
+						<li><img id="smiley" src="images/smiley.png">Good buy!</li>
+						<li><img id="smiley" src="images/smiley.png">Cheap</li>
+					</ul>
+				</div>
+				
+				
 				<!-- The "Add to compare list" button and its pop-up window-->
 				<div class="ui-content" >
-					<a id="addToCompareBtn" href="#successAdd" data-position-to="window" data-transition="pop" data-rel="popup" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">Add to compare list!</a>
+					<a id="addToCompareBtn" href="#successAdd" data-position-to="window" data-transition="pop" data-rel="popup" class="ui-btn ui-icon-arrow-r ui-btn-icon-right" style="background: green">Add to compare list!</a>
 				</div>
 				
 				<div data-role="popup" id="successAdd" class="ui-content">
