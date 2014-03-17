@@ -7,6 +7,61 @@
 <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
 
 <style>
+
+
+.readmore {
+background: #2f2f2f;
+text-align: center;
+display: block;
+width: 250px;
+border-radius:8px;
+-moz-border-radius:8px;
+-webkit-border-radius:8px;
+box-shadow: 0px 3px 5px #000;
+-moz-box-shadow: 0px 3px 5px #000;
+-webkit-box-shadow: 0px 3px 5px #000;
+}
+
+.readmore:hover {
+position:relative;
+top:3px;
+color: #fqq;
+box-shadow:none;
+-moz-box-shadow:none;
+-webkit-box-shadow:none;
+}
+
+.shadow
+{
+	box-shadow: 0px 3px 10px #000;
+	-moz-box-shadow: 10px 13px 15px #000;
+}
+
+table,th,td
+{
+
+
+padding:6px;
+text-align:center;
+border-spacing:5px;
+table-layout:fixed;
+
+
+}
+
+.styled-select select {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   }
+
+
   h6 {display:none;}
   h3 {display:none;}
   h4 {display:none;}
@@ -37,7 +92,13 @@ p {
     font-family: Century Gothic;
 }
 
-        
+.basith 
+{
+	
+	top:39px;
+	left:200px;
+	
+}        
 </style>
 
 <script>
@@ -71,7 +132,7 @@ function myBlue()
 
 function removeFirst()
 {
-	document.getElementById('img1').src="../images/question-mark.png";
+	document.getElementById('img1').src="../images/question_mark.png";
 	document.getElementById('first_1').src="../products/female_top1.png";
 	$("h4").hide();
 	$("cross1").show();
@@ -79,7 +140,7 @@ function removeFirst()
 
 function removeSecond()
 {
-	document.getElementById('img2').src="../images/question-mark.png";
+	document.getElementById('img2').src="../images/question_mark.png";
 	document.getElementById('second_1').src="../products/female_top2.png";
 	$("h5").hide();
 	$("cross2").show();
@@ -90,7 +151,7 @@ function removeSecond()
 function close1(){
 	
 	$("<div class='ui-loader ui-overlay-shadow ui-body-e ui-corner-all'><h1><strong>Deleted</strong></h1></div>")
-    .css({ "display":"block", "opacity":0.96, "top": $(window).scrollTop() + 300 , "left": $(window).scrollTop() + 100})
+    .css({ "backgroundColor":"white","display":"block","top": $(window).scrollTop() + 300 , "left": $(window).scrollTop() + 100})
     .appendTo( $("body") )
     .delay( 500 )
     .fadeOut( 200, function(){
@@ -130,6 +191,7 @@ function compare()
 {
 	
 	$("h2").hide();
+	
 	$("h3").show();
 	document.getElementById("img1").style.borderColor="Chartreuse";
 	document.getElementById("img1").style.borderWidth="thick";	
@@ -169,29 +231,29 @@ function HighlightBorder()
 			
        
           	<div class="ui-block-a">
-				 <img id="img1" img alt="" src="../images/question-mark.png" border="1" style="height: 150px; width: 110px; margin-top: 0em;margin-left: 1.2em;" />
+				 <img id="img1" img alt="" src="../images/question_mark.png" border="1" style="height: 150px; width: 110px; margin-top: 0em;margin-left: 1.2em;" />
 				 
           	</div>
 
  			<div class="ui-block-b">
 			 	<h4>
-					 <button type="button" onclick="removeFirst()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 35px; height: 40px;top:-20px;left:13px"><img alt="" src="../images/arrow4.png" style="width: 17px; height: 17px" /></button>
+					 <button type="button" onclick="removeFirst()"  class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; top:-15px;left:17px"></button>
  					
-					 <button type="button" onclick="removeFirst()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 50px; height: 50px;top:-70px;left:-75px"><img alt="" src="../images/i_symbol.png" style="width: 19px; height: 19px" /></button>
+					 <button type="button" onclick="removeFirst()"  class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext" style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none;top:-51px;left:-68px"></button>
  				 	<DIV style="font-size:12px;position: absolute;left:25px;top: 230px;">Mango Cardigan</DIV>
  				
  				</h4>            
  			</div>
               
           	<div class="ui-block-c">
-          		<img id="img2" img alt="" src="../images/question-mark.png" border="1" style="height: 150px; width: 110px; margin-top: 0em;margin-left: 3.4em;" />
+          		<img id="img2" img alt="" src="../images/question_mark.png" border="1" style="height: 150px; width: 110px; margin-top: 0em;margin-left: 3.4em;" />
 				  		
 			</div>
 				 
 			<div class="ui-block-d">
 				<h5>
-			 		 <button type="button" onclick="removeSecond()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 35px; height: 40px;top:-20px;left:38px"><img alt="" src="../images/arrow4.png" style="width: 17px; height: 17px" /></button>
-                 	<button type="button" onclick="removeFirst()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 50px; height: 50px;top:-70px;left:-52px"><img alt="" src="../images/i_symbol.png" style="width: 19px; height: 19px" /></button>
+			 		 <button type="button" onclick="removeSecond()"  class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext" style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; top:-15px;left:41px"></button>
+                 	<button type="button" onclick="removeFirst()" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext" style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none;top:-51px;left:-44px"></button>
  				 	<DIV style="font-size:12px;position: absolute;left:220px;top: 230px;">ASOS Tshirt</DIV>
                  </h5>
  			</div>
@@ -207,31 +269,31 @@ function HighlightBorder()
 		<div class="ui-block-a">
 			<img id="first_1" onclick="myYellow()" alt="" src="../products/female_top1.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/> 
 			<cross1>
-				<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:68px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>
+				
+				<button type="button" onclick="close1()" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none;top:-104px;left:73px"></button>		
 			</cross1>
 		</div>
 		
 		<div class="ui-block-b">
 			<img id="second_1" onclick="myBlue()" alt="" src="../products/female_top2.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/>
 		    <cross2>
-		    	<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:68px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>  
+		    	<button type="button" onclick="close1()" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none;top:-104px;left:73px"></button>  
 			</cross2>
 		</div>
 		
 		<div class="ui-block-c">
-			<img alt="" src="../products/female_bottom1.png" border="1" style="width: 90px; height: 95px;margin-left:8px" />
-		 	<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:68px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>
+			<img alt="" src="../images/add-item.png" border="1" style="width: 90px; height: 95px;margin-left:8px" />
 		</div>
 	</div>
 	<div class="ui-grid-b">
 		<div class="ui-block-a">
-			<img alt="" src="../products/female_bag2.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/> 
-			<button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:68px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>
+			<img alt="" src="../products/female_top4.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/> 
+			<button type="button" onclick="close1()" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none;top:-104px;left:68px"></button>
 		</div>
 		
 		<div class="ui-block-b">
-			<img alt="" src="../products/male_bottoms2.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/>
-		    <button type="button" onclick="close1()"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none; width: 40px; height: 40px;top:-114px;left:68px"><img alt="" src="../images/close-button.png" style="width: 20px; height: 20px" /></button>  
+			<img alt="" src="../products/ralph_lauren4.png" border="1" style="width: 90px; height: 95px;margin-left: 8px;"/>
+		    <button type="button" onclick="close1()" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext"  style="background-color: rgba(0, 0, 0, 0);border: none; box-shadow: none;top:-104px;left:68px"></button>
 		</div>
 		
 		<div class="ui-block-c">
@@ -250,12 +312,15 @@ function HighlightBorder()
 	  
 		     
 		<!-- Criteria buttons -->
-  	 	<button type="button"  id="button1" onclick="logic1()" style="font-size:10px; background-color:Chartreuse; width: 60px; height: 30px;position:absolute;top:310px;left:135px">Price</button> 
-    	<button type="button" style="font-size:10px; background-color:Chartreuse; width: 60px; height: 30px;position:absolute;top:350px;left:135px">Location</button>
-   		<button type="button" style="font-size:10px; background-color:Chartreuse; width: 60px; height: 30px;position:absolute;top:390px;left:135px">Stock</button>
-     	<button type="button" id="button2" onclick="logic2()"style="font-size:10px; background-color:Chartreuse; width: 60px; height: 30px;position:absolute;top:430px;left:135px">Likes</button>
-       	<button type="button" style="font-size:10px; background-color:Chartreuse; width: 60px; height: 30px;position:absolute;top:470px;left:135px">Ratings</button>
-    
+  	 	<button type="button" id="button1" class="shadow" onclick="logic1()" style="font-size:10px; background-color:Chartreuse; width: 60px; height: 30px;position:absolute;top:310px;left:130px">Price</button> 
+    	<button type="button" class="shadow" style="font-size:10px; background-color:Chartreuse; width: 60px; height: 30px;position:absolute;top:350px;left:130px">Location</button>
+   		<button type="button" class="shadow" style="font-size:10px; background-color:Chartreuse; width: 60px; height: 30px;position:absolute;top:390px;left:130px">Stock</button>
+     	<button type="button" class="shadow" id="button2" onclick="logic2()"style="font-size:10px; background-color:Chartreuse; width: 60px; height: 30px;position:absolute;top:430px;left:130px">Likes</button>
+       	<button type="button" class="shadow" style="font-size:10px; background-color:Chartreuse; width: 60px; height: 30px;position:absolute;top:470px;left:130px">Ratings</button>
+    	
+    	
+    	
+    	
     	
     <!-- Test
     <div class="ui-grid-b-1">
@@ -282,38 +347,123 @@ function HighlightBorder()
 	-->
     
     <!--Details of Comparison 1-->
-     <b style="font-size:15px;position:absolute;top:320px;left:50px">SGD25</b>
-     <div data-role="collapsible" style="font-size:12px ;width: 113px; height: 1px;position:absolute;top:347px;left:15px" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-mini="true">
-    	<h4>Northpoint</h4>Plaza Sing<br>Ion
-	 </div>
-     <b style="font-size:15px;position:absolute;top:400px;left:62px">53</b>
-     <b style="font-size:15px;position:absolute;top:440px;left:62px">220</b>
-      <a href="#myPopup1" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" style="background-color: rgba(10, 0, 0, 0);border: none; box-shadow: none; width: 80px; height: 40px;position:absolute;top:457px;left:15px"><img alt="" src="../images/1-star.png" style="width: 65px; height: 18px" /></a>
+     	
+     <table width="130" style="position:absolute;top:300px;">
+<tr>
+  <td>SGD25</td>
+ 
+</tr>
+</table> 
+
+ 		<div style="width:37%; height:10%;position:absolute;top:346px;left:5px">
+			<select name="loc" id="loc" onchange="locChange()" data-mini="true">
+						<optgroup label="Plaza Singapura">
+							<option value="mon">04-14 Mango</option>
+						</optgroup>
+						<optgroup label="313 Somerset">
+							<option value="sat">02-12 Mango</option>
+						</optgroup>
+						<optgroup label="ION Orchard">
+							<option value="sat">02-43 Mango</option>
+						</optgroup>
+					</select>
+								
+		</div>	  
+  
+
+
+ <table width="130" style="position:absolute;top:380px;">
+<tr>
+  <td>10</td>
+ 
+</tr>
+<tr>
+  <td>54</td>
+</tr>
+<tr>
+  <td><a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" style="background-color: rgba(10, 0, 0, 0);border: none; box-shadow: none;top:-20px;"><img alt="" src="../images/3-star.png" style="width: 60px; height: 18px" /></a></td>
+ 
+</tr>
+
+</table> 
+     
+     
+     
+     
+     
+     
      
     
     <!--Details of Comparison 2-->
-      <b style="font-size:15px;position:absolute;top:320px;left:225px">SGD30</b>
-      <div data-role="collapsible" style="font-size:12px ;width: 113px; height: 1px;position:absolute;top:347px;left:200px" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-mini="true">
-    	<h4>Northpoint</h4>Plaza Sing<br>Ion
-      </div>
-     <b style="font-size:15px;position:absolute;top:400px;left:245px">34</b>
-     <b style="font-size:15px;position:absolute;top:440px;left:245px">22</b>
-     <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" style="background-color: rgba(10, 0, 0, 0);border: none; box-shadow: none; width: 80px; height: 40px;position:absolute;top:457px;left:200px"><img alt="" src="../images/3-star.png" style="width: 65px; height: 18px" /></a>
+     
+      
+      
+      <table width="130" style="position:absolute;top:300px;left:190px">
+<tr>
+  <td>SGD30</td>
+ 
+</tr>
+</table> 
+      
+      
+      
+      
+      
+      <div style="width:37%; height:10%;position:absolute;top:346px;left:198px">
+			<select name="loc" id="loc" onchange="locChange()" data-mini="true">
+						<optgroup label="Raffles City">
+							<option value="mon">01-02 Robinsons</option>
+						</optgroup>
+						<optgroup label="Cathay Cineleisure">
+							<option value="sat">02-11 Isetan</option>
+						</optgroup>
+						<optgroup label="Tangs">
+							<option value="sat">01-11 Tangs</option>
+						</optgroup>
+					</select>
+								
+		</div>	  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <table width="130" style="position:absolute;top:380px;left:190px">
+<tr>
+  <td>12</td>
+ 
+</tr>
+<tr>
+  <td>10</td>
+</tr>
+<tr>
+  <td><a href="#myPopup1" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" style="background-color: rgba(10, 0, 0, 0);border: none; box-shadow: none;top:-20px;"><img alt="" src="../images/1-star.png" style="width: 60px; height: 18px" /></a></td>
+ 
+</tr>
+
+</table> 
+     
      
 </h3>
 
 
 <div data-role="popup" id="myPopup">
-  <p><b>Linda Chan: </b>"Pretty good. They're long like Tallboys Apparel T-shirts. They're still the best in my opinion though."</p>
-
-  <p><b>Jennifer Chong: </b>"This truly is the perfect top. I'm surprised that people buy other brands of shirts...it fits phenomenally, ages well, retains its color. I couldn't ask for a shirt that fits or looks better."</p>
+  <p><b>Chan Wei Qi: </b>Pretty good. They're long like Tallboys Apparel T-shirts. They're still the best in my opinion though.</p>
+  
+  <p><b>Jennifer Low: </b>This truly is the perfect T-shirt. I'm surprised that people buy other brands of shirts...it fits phenomenally, ages well, retains its color. I couldn't ask for a shirt that fits or looks better.</p>
 </div>
 
 <div data-role="popup" id="myPopup1">
-  <p><b>Andrea Tay: </b>i really love this product, the colours are great however I would recommend you to go in store to pick them as you can pick any three colours you want to go together. :)</p>
-
-  <p><b>Tan Wei Qi: </b>how can anyone complain? it's the perfect cardigan.</p>
+  <p><b>Lydia Tng: </b>i really love this product, the colours are great however I would recommend you to go in store to pick them as you can pick any three colours you want to go together. :)</p>
+  
+  <p><b>Amelia Tan: </b>how can anyone complain? it's the perfect t-shirt.</p>
 </div>
+
+
 
 
   <div data-role="footer" data-position="fixed">
