@@ -19,6 +19,10 @@ public class ProductDM {
 		LocationDAO.addList(locList);
 	}
 	
+	public static void addResults(ArrayList<Results> resultsList) {
+		ResultsDAO.addList(resultsList);
+	}
+	
 	public static Location getLocation(String ID) {
 		List<Location> locList = LocationDAO.retrieveAll();
 		for (Location loc : locList) {
@@ -27,6 +31,146 @@ public class ProductDM {
 			}
 		}
 		return null;
+	}
+	
+	public static Product getProductBasedOnID(String id) {
+		List<Product> allProducts = ProductDAO.retrieveAll();
+		for (Product p : allProducts) {
+			if (p.getProductID().equals(id)) {
+				return p;
+			}
+		}
+		return null;
+	}
+	
+	public static String[] getPriceResultsBasedOnID(String id) {
+		List<Results> allResults = ResultsDAO.retrieveAll();
+		
+		for (Results r : allResults) {
+			if (r.getListID().equals(id)) {
+				return r.getPriceList();
+			}
+		}
+		return null;
+	}
+	
+	public static String[] getLikesResultsBasedOnID(String id) {
+		List<Results> allResults = ResultsDAO.retrieveAll();
+		
+		for (Results r : allResults) {
+			if (r.getListID().equals(id)) {
+				return r.getLikesList();
+			}
+		}
+		return null;
+	}
+	
+	public static void loadResults() {
+		//clear datastore first in case of duplicated loading
+		ResultsDAO.deleteAll();
+		
+		//data file
+		File file = new File("results.txt");
+		
+		ArrayList<Results> resultsList = new ArrayList<Results>();
+		
+		 // Initialize some variables to be used shortly.
+	    String s = null;
+	    List<String> a = new ArrayList<String>();
+		
+		try {
+	        // Use new BufferedReader 'in' to read in 'f'.
+	        BufferedReader in = new BufferedReader(new FileReader(file));
+	
+	        int row = 1;
+	        // Read the first line into String 's'. 
+	        s = in.readLine();
+	        
+	        // So long as 's' is NOT null...
+	        while(s != null) {
+	            // Split the current line, using semi-colons as delimiters, and store in 'a'.
+	            // Convert 'a' to array 'aSplit', then add 'aSplit' to 'l'.
+	            a = Arrays.asList(s.split("\t"));
+	            String[] aSplit = a.toArray(new String[5]);
+	            
+	            if (row%2!=0) {
+	            	String listID = aSplit[0];
+
+		            String p1 = aSplit[1];
+		            
+		            String p2 = aSplit[2];
+		            
+		            String p3 = aSplit[3];
+
+		            String p4 = aSplit[4];
+		            
+		            String[] priceList = new String[5];
+		            priceList[0] = p1;
+		            
+		            if (p2 != null && !p2.equals("")) {
+		            	priceList[1] = p2;
+		            }
+		            
+		            if (p3 != null && !p3.equals("")) {
+		            	priceList[2] = p3;
+		            }
+		            
+		            if (p4 != null && !p4.equals("")) {
+		            	priceList[3] = p4;
+		            }
+		            
+		            Results newR = new Results(listID, priceList);
+		            resultsList.add(newR);
+	            } else {
+		            String listID = aSplit[0];
+		            
+		            String p1 = aSplit[1];
+		            
+		            String p2 = aSplit[2];
+		            
+		            String p3 = aSplit[3];
+					
+		            String p4 = aSplit[4];
+		            
+		            
+		            String[] likesList = new String[5];
+		            likesList[0] = p1;
+		            
+		            if (p2 != null && !p2.equals("")) {
+		            	likesList[1] = p2;
+		            }
+		            
+		            if (p3 != null && !p3.equals("")) {
+		            	likesList[2] = p3;
+		            }
+		            
+		            if (p4 != null && !p4.equals("")) {
+		            	likesList[3] = p4;
+		            }
+		            
+		            
+					Results retrievedR = resultsList.get(Integer.parseInt(listID)-1);
+					retrievedR.setLikesList(likesList);
+					resultsList.set(Integer.parseInt(listID)-1, retrievedR);
+	            }
+				
+	            // Read next line of file.
+	            s = in.readLine();
+	            row++;
+	        }
+	
+	        // Once finished, close 'in'.
+	        in.close();
+	        
+	      //add all products to datastore
+	      addResults(resultsList);
+	        
+	        
+	    } catch (IOException e) {
+	        // If problems occur during 'try' code, catch exception and include StackTrace.
+	        e.printStackTrace();
+	    }
+		
 	}
 	
 	public static void readFile() {
@@ -59,7 +203,7 @@ public class ProductDM {
 	            // Split the current line, using semi-colons as delimiters, and store in 'a'.
 	            // Convert 'a' to array 'aSplit', then add 'aSplit' to 'l'.
 	            a = Arrays.asList(s.split("\t"));
-	            String[] aSplit = a.toArray(new String[14]);
+	            String[] aSplit = a.toArray(new String[23]);
 	            
 	            String id = aSplit[0];
 	            
@@ -114,7 +258,7 @@ public class ProductDM {
 				int stock3 = Integer.parseInt(aSplit[17]);
 				//System.out.println("16");
 				
-				Location newLoc = new Location(name, mall1, store1, dist1, stock1, mall2, store2, dist2, stock2, mall3, store3, dist3, stock3);
+				Location newLoc = new Location(id, mall1, store1, dist1, stock1, mall2, store2, dist2, stock2, mall3, store3, dist3, stock3);
 				locList.add(newLoc);
 				
 				int likes = Integer.parseInt(aSplit[18]);

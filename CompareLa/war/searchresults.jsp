@@ -1,3 +1,5 @@
+<%@ page import="datamanager.*,entity.*,java.util.*" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +7,24 @@
 <link rel="stylesheet" href="jquery.mobile-1.4.1/jquery.mobile-1.4.1.min.css">
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('input:radio[name=sortby]').change(function() {
+        if (this.value == 'price') {
+            $("h10").show();
+            $("h11").hide();
+        } 
+        else if (this.value == 'likes') {
+            $("h10").hide();
+            $("h11").show();
+        } else {
+        	$("h10").show();
+            $("h11").hide();
+        }
+    });
+});
+</script>
 
 <style type="text/css">
     	.ui-content {
@@ -65,6 +85,11 @@
             text-align: center;
             font-weight: bold;
         }
+        
+        h11
+		{
+		  display:none;
+		}
     </style>
 
 
@@ -73,9 +98,10 @@
 
 <%
 String check = (String) request.getParameter("check");
+String num = (String) request.getParameter("num");
 if (check != null && check.equals("true")) { 
 %>
-	<meta http-equiv="refresh" content="0; url=../searchresults.jsp" />
+	<meta http-equiv="refresh" content="0; url=../searchresults.jsp?num=<%=num%>" />
 
 <%}%>
 
@@ -83,50 +109,128 @@ if (check != null && check.equals("true")) {
 <div data-role="header" data-position="inline" data-position="fixed">
 	<a href="../searchresults.jsp" data-icon="info" data-iconpos="notext">Logo</a>
    <h1>Search Results</h1>
-   <a href="../searchresults_bars.jsp?check=true" data-icon="bars" data-iconpos="notext" data-transition="none">Bars</a>
+   <a href="../searchresults_bars.jsp?check=true&num=<%=num%>" data-icon="bars" data-iconpos="notext" data-transition="none">Bars</a>
 </div>
 
 <%--search bar and filter options--%>
 <div style="width:90%;margin-left:auto;margin-right:auto;">
-	<ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Ralph Lauren Polo" data-mini="true"></ul>
+	<ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search for another product..." data-mini="true">
+    	<li><a href="../searchresults.jsp?check=true&num=1">Ralph Lauren White</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=2">Ralph Lauren Black</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=3">Ralph Lauren Blue</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=4">Ralph Lauren Red</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=5">Herschel Black Bag</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=6">Herschel Coloured Bag</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=7">G Star Denim Shorts</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=8">Red Lee 5 Berms</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=9">Fossil Watch</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=10">Hugo Boss Watch</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=11">River Island Quilted Bag</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=12">Anchor Duffle Bag</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=13">Levi's Jeans</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=14">Topshop Denim Shorts</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=15">Mango Cardigan</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=16">ASOS T-shirt in Stripes</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=17">Marc Jacobs Watch</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=18">Tommy Hilfiger Watch</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=19">Cheap Monday Skull Shirt</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=20">Cheap Monday Monochrome</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=21">Mango Check Blouse</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=22">Ralph Lauren</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=23">Herschel</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=24">Watch</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=25">Bag</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=26">Shorts</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=27">Cheap Monday</a></li>
+	    <li><a href="../searchresults.jsp?check=true&num=28">Mango</a></li>
+	</ul>
     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-     	<input type="radio" name="radio-choice-2" id="radio-choice-21" value="choice-1" checked="checked" />
-     	<label for="radio-choice-21">Sort by Price</label>
+     	<input type="radio" name="sortby" id="price" value="price" checked="checked" />
+     	<label for="price">Sort by Price</label>
 
-     	<input type="radio" name="radio-choice-2" id="radio-choice-22" value="choice-2"  />
-     	<label for="radio-choice-22">Sort by Likes</label>
+     	<input type="radio" name="sortby" id="likes" value="likes"  />
+     	<label for="likes">Sort by Likes</label>
     </fieldset>
 </div>
 
-<%--Products multiple views--%>
+<h10>
+<%--Price View - Products multiple views--%>
 <br>
+
+<%--decide what results to display--%>
+<%
+String[] selectedList = ProductDM.getPriceResultsBasedOnID(num);
+%>
+
 <div class="ui-grid-a">
 	<div class="ui-block-a">
-		
-		<div class="ui-add-icon-left" style="position:absolute; right:5px;">
-			<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
-		</div>
-		<a href="../item_details.jsp"><img src="../products/ralph_lauren4.png" border="1"></a><p>Red Ralph Lauren<br>SGD169</p>
-		
-		<div class="ui-add-icon-left" style="position:absolute; right:5px;">
-			<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
-		</div>
-		<img src="../products/ralph_lauren1.png" border="1"><p>White Ralph Lauren<br>SGD169</p>			
+		<%
+		for (int i = 0; i < selectedList.length; i+=2) { 
+			if (selectedList[i] != null) {
+				Product p = ProductDM.getProductBasedOnID(selectedList[i]);
+		%>
+			<div class="ui-add-icon-left" style="position:absolute; right:5px;">
+				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
+			</div>
+			<a href="../item_details.jsp?check=true&productID=<%=p.getProductID()%>"><img src="<%=p.getImgRef()%>" border="1"></a><p><%=p.getProductName()%><br>SGD<%=p.getPrice()%></p>
+		<% } 
+		}%>
 	</div>
 	<div class="ui-block-b">
-	
-		<div class="ui-add-icon-right" style="position:absolute; right:5px;">
-			<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
-		</div>
-		<img src="../products/ralph_lauren2.png" border="1"><p>Black Ralph Lauren<br>SGD169</p>
-		
-		<div class="ui-add-icon-right" style="position:absolute; right:5px;">
-			<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
-		</div>
-		<img src="../products/ralph_lauren3.png" border="1"><p>Blue Ralph Lauren<br>SGD169</p>
+		<%
+		for (int i = 1; i < selectedList.length; i+=2) { 
+			if (selectedList[i] != null) {
+				Product p = ProductDM.getProductBasedOnID(selectedList[i]);
+		%>
+			<div class="ui-add-icon-right" style="position:absolute; right:5px;">
+				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
+			</div>
+			<a href="../item_details.jsp?check=true&productID=<%=p.getProductID()%>"><img src="<%=p.getImgRef()%>" border="1"></a><p><%=p.getProductName()%><br>SGD<%=p.getPrice()%></p>
+		<% }
+		}%>
 	</div>
 </div>
+</h10>
 
+<h11>
+<%--Price View - Products multiple views--%>
+<br>
+
+<%--decide what results to display--%>
+<%
+selectedList = ProductDM.getLikesResultsBasedOnID(num);
+%>
+
+
+<div class="ui-grid-a">
+	<div class="ui-block-a">
+		<%
+		for (int i = 0; i < selectedList.length; i+=2) { 
+			if (selectedList[i] != null) {
+				Product p = ProductDM.getProductBasedOnID(selectedList[i]);
+		%>
+			<div class="ui-add-icon-left" style="position:absolute; right:5px;">
+				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
+			</div>
+			<a href="../item_details.jsp"><img src="<%=p.getImgRef()%>" border="1"></a><p><%=p.getProductName()%><br>SGD<%=p.getPrice()%></p>
+		<% } 
+		}%>
+	</div>
+	<div class="ui-block-b">
+		<%
+		for (int i = 1; i < selectedList.length; i+=2) { 
+			if (selectedList[i] != null) {
+				Product p = ProductDM.getProductBasedOnID(selectedList[i]);
+		%>
+			<div class="ui-add-icon-right" style="position:absolute; right:5px;">
+				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
+			</div>
+			<a href="../item_details.jsp"><img src="<%=p.getImgRef()%>" border="1"></a><p><%=p.getProductName()%><br>SGD<%=p.getPrice()%></p>
+		<% }
+		}%>
+	</div>
+</div>
+</h11>
 <%--footer--%>
 <div data-role="footer" data-position="fixed">
  <div data-role="navbar">

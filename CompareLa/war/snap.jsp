@@ -51,7 +51,7 @@ h3 {
 	<br>
 	<center><img src="../images/camera.png" height="70" width="70"></center>
 	<br>
-	<form action="../searchresults.jsp?check=true">
+	<form action="../searchresults.jsp?check=true&num=1">
 		<input type="file" accept="image/*;capture=camera">
 		<br>
 		<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Search</button>

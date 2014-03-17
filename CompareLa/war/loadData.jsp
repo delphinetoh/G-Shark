@@ -14,6 +14,7 @@
 
 <%
 ProductDM.readFile();
+ProductDM.loadResults();
 %>
 
 

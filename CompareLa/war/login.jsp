@@ -7,40 +7,27 @@
 <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
 
 <style>
-.ui-grid-a img {
-    width  : 50%;
-    height : auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.ui-grid-a p {
-	text-align: center
-}
-
-p {
-	text-align:center;
-	font-weight:bold;
-	font-size: 12px;
-}
-
 h1 {
-	text-align:center;
-	font-weight:bold;
+text-align:center;
+font-weight:bold;
 }
-
 </style>
 
 </head>
 <body>
 
-<br><br><br>
-<h1>WELCOME</h1>
-<br><br>
+<br>
+<h1>LOGIN</h1>
+<br>
 <center><img src="../images/comparela_logo.png"  height="180" width="180"></center>
-
-<meta http-equiv="refresh" content="2; url=../whatsnew.jsp">
+<br><br>
+<div style="width:90%;margin-left:auto;margin-right:auto;">
+	<form action="login">
+		<label for="passcode">Passcode:</label>
+		<input type="text" name="passcode" id="passcode" style="width:90%;">
+		<input type="submit" value="Login" style="width:90%;">
+	</form>
+</div>
 
 
 </body>

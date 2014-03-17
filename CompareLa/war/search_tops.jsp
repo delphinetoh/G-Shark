@@ -74,7 +74,7 @@ session.setAttribute("check","true");
 		        </ul>
 		    </div>
 		    <div id="her" class="ui-content">
-				<form action="../searchresults.jsp?check=true">
+				<form action="../searchresults.jsp?check=true&num=29">
 					<div style="padding:10px 20px;">
 	                    <div data-role="rangeslider" data-mini="true">
 	                        <label for="range-1a">Price:</label>
@@ -85,9 +85,10 @@ session.setAttribute("check","true");
 	
 	                    <label for="select-brand-her" class="select">Brands:</label>
 	                    <select name="select-brand-her" id="select-brand-her" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+	                        <option value="asos" selected="">ASOS</option>
+	                        <option value="cheapmonday" selected="">Cheap Monday</option>
 	                        <option value="mango" selected="">Mango</option>
 	                        <option value="topshop" selected="">Topshop</option>
-	                        <option value="zara" selected="">Zara</option>
 	                    </select>
 	                    
 	                    <label for="select-size-her" class="select">Sizes:</label>
@@ -95,6 +96,8 @@ session.setAttribute("check","true");
 	                        <option value="uk2" selected="">UK2</option>
 	                        <option value="uk4" selected="">UK4</option>
 	                        <option value="uk6" selected="">UK6</option>
+	                        <option value="uk8" selected="">UK8</option>
+	                        <option value="uk10" selected="">UK10</option>
 	                    </select>
 	                    
 	                    <br>
@@ -103,17 +106,18 @@ session.setAttribute("check","true");
 			    </form>
 		    </div>
 		    <div id="him" class="ui-content">
-		        <form action="../searchresults.jsp?check=true">
+		        <form action="../searchresults.jsp?check=true&num=22">
 					<div style="padding:10px 20px;">
 	                    <div data-role="rangeslider" data-mini="true">
 	                        <label for="range-1a-him">Price:</label>
-	                        <input type="range" name="range-1a-him" id="range-1a-him" min="30" max="100" value="30">
+	                        <input type="range" name="range-1a-him" id="range-1a-him" min="30" max="199" value="30">
 	                        <label for="range-1b-him">Rangeslider:</label>
-	                        <input type="range" name="range-1b-him" id="range-1b-him" min="30" max="100" value="100">
+	                        <input type="range" name="range-1b-him" id="range-1b-him" min="30" max="199" value="199">
 	                    </div>
 	
 	                    <label for="select-brand-him" class="select">Brands:</label>
 	                    <select name="select-brand-him" id="select-brand-him" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+	                        <option value="asos" selected="">ASOS</option>
 	                        <option value="fredperry" selected="">Fred Perry</option>
 	                        <option value="ralphlauren" selected="">Ralph Lauren</option>
 	                        <option value="topman" selected="">Topman</option>

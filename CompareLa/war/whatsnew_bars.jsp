@@ -8,6 +8,78 @@
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
 
+	<script>
+		$(document).ready(function() {
+		    $('input:radio[name=her-pref]').change(function() {
+		        if (this.value == 'tops') {
+		            $("h13").show();
+		            $("h14").hide();
+		            $("h7").hide();
+		            $("h8").hide();
+		        } 
+		        else if (this.value == 'bottoms') {
+		            $("h13").hide();
+		            $("h14").show();
+		            $("h7").hide();
+		            $("h8").hide();
+		        }
+		        else if (this.value == 'bags') {
+		            $("h13").hide();
+		            $("h14").hide();
+		            $("h7").show();
+		            $("h8").hide();
+		        }
+		        else if (this.value == 'watch') {
+		            $("h13").hide();
+		            $("h14").hide();
+		            $("h7").hide();
+		            $("h8").show();
+		        }
+		        else if (this.value == 'all') {
+		            $("h13").show();
+		            $("h14").show();
+		            $("h7").show();
+		            $("h8").show();
+		        }
+		    });
+		});
+		
+		$(document).ready(function() {
+		    $('input:radio[name=him-pref]').change(function() {
+		        if (this.value == 'tops') {
+		            $("h9").show();
+		            $("h10").hide();
+		            $("h11").hide();
+		            $("h12").hide();
+		        } 
+		        else if (this.value == 'bottoms') {
+		            $("h9").hide();
+		            $("h10").show();
+		            $("h11").hide();
+		            $("h12").hide();
+		        }
+		        else if (this.value == 'bags') {
+		            $("h9").hide();
+		            $("h10").hide();
+		            $("h11").show();
+		            $("h12").hide();
+		        }
+		        else if (this.value == 'watch') {
+		            $("h9").hide();
+		            $("h10").hide();
+		            $("h11").hide();
+		            $("h12").show();
+		        }
+		        else if (this.value == 'all') {
+		            $("h9").show();
+		            $("h10").show();
+		            $("h11").show();
+		            $("h12").show();
+		        }
+		    });
+		});
+	</script>
+
     <style>
     	.ui-content {
     		padding:0;
@@ -67,6 +139,12 @@
         .ui-li-static.ui-collapsible > .ui-collapsible-heading > .ui-btn {
             border-top-width: 0;
         }
+        
+        .ui-add-icon {
+        	position: absolute;
+			float: left;
+			left: 265px;
+        }
     </style>
 
 </head>
@@ -103,235 +181,296 @@ if (check != null && check.equals("true")) {
     <div id="her" class="ui-content">
 	
 	<%--For Her PreferenceBar--%>
-		<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" align="center">
-			<input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a">
-			<label for="checkbox-h-6a">Tops</label>
-			<input type="checkbox" name="checkbox-h-6b" id="checkbox-h-6b">
-			<label for="checkbox-h-6b">Bottoms</label>
-			<input type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
-			<label for="checkbox-h-6c">Shoes</label>
-			<input type="checkbox" name="checkbox-h-6d" id="checkbox-h-6d">
-			<label for="checkbox-h-6d">Bags</label>
-		</fieldset>
+		<form name="her-pref-form" data-role="controlgroup" data-type="horizontal" data-mini="true" align="center">
+		 	<input type="radio" name="her-pref" id="all" value="all" checked="checked" />
+		 	<label for="all">All</label>
+		
+		 	<input type="radio" name="her-pref" id="tops" value="tops"  />
+		 	<label for="tops">Tops</label>
+		 	
+		 	<input type="radio" name="her-pref" id="bottoms" value="bottoms"  />
+		 	<label for="bottoms">Bottoms</label>
+		 	
+		 	<input type="radio" name="her-pref" id="bags" value="bags"  />
+		 	<label for="bags">Bags</label>
+		 	
+		 	<input type="radio" name="her-pref" id="watch" value="watch"  />
+		 	<label for="watch">Watch</label>
+		</form>
 
 	<%--For Her Products--%>
 		<br>
-	<div class="ui-grid-solo" align="center">
-		<img src="../products/female_top1.png" border="1"><font face="century gothic">Mango Cardigan<br>SGD25</font>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>				
-				<div data-role="popup" id="successAdd" class="ui-content">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
-					<h3>Item successfully added!</h3>
+		<div class="ui-grid-solo" align="center">
+			<h13>
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
-			</div>
-		</div>
-		<br>
-		
-		<img src="../products/female_top2.png" border="1"><font face="century gothic">ASOS Tshirt in Stripes<br>SGD30</font>		
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>				
-				<div data-role="popup" id="successAdd" class="ui-content">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
-					<h3>Item successfully added!</h3>
+				<a href="../item_details.jsp?check=true&productID=15"><img src="../products/female_top1.png" border="1"></a><font face="century gothic">Mango Cardigan<br>SGD25</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
 				</div>
-			</div>
-		</div>
-		<br>
-		
+				<br>
 				
-		
-		<img src="../products/female_bottom1.png" border="1"><font face="century gothic">Levi's Jeans<br>SGD129</font>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>				
-				<div data-role="popup" id="successAdd" class="ui-content">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
-					<h3>Item successfully added!</h3>
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
-			</div>
-		</div>
-		<br>
-		
-		<img src="../products/female_bottom2.png" border="1"><font face="century gothic">Topshop Denim Shorts<br>SGD49</font>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>				
-				<div data-role="popup" id="successAdd" class="ui-content">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
-					<h3>Item successfully added!</h3>
+				<a href="../item_details.jsp?check=true&productID=16"><img src="../products/female_top2.png" border="1"></a><font face="century gothic">ASOS Tshirt in Stripes<br>SGD30</font>		
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
 				</div>
-			</div>
-		</div>
-		
-		<img src="../products/female_bag2.png" border="1"><font face="century gothic">Anchor Duffle Bag<br>SGD79</font>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>				
-				<div data-role="popup" id="successAdd" class="ui-content">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
-					<h3>Item successfully added!</h3>
+				<br>
+			</h13>
+					
+			<h14>
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
-			</div>
-		</div>
-		
-		<img src="../products/female_bag1.png" border="1"><font face="century gothic">River Island Quilted Bag<br>SGD259</font>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>				
-				<div data-role="popup" id="successAdd" class="ui-content">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
-					<h3>Item successfully added!</h3>
+				<a href="../item_details.jsp?check=true&productID=13"><img src="../products/female_bottom1.png" border="1"></a><font face="century gothic">Levi's Jeans<br>SGD129</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
 				</div>
-			</div>
-		</div>
-		
-		<img src="../products/female_watch1.png" border="1"><font face="century gothic">Marc Jacobs Watch<br>SGD155</font>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>				
-				<div data-role="popup" id="successAdd" class="ui-content">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
-					<h3>Item successfully added!</h3>
+				<br>
+				
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
-			</div>
-		</div>
-		
-		<img src="../products/female_watch2.png" border="1"><font face="century gothic">Tommy Hilfiger Watch<br>SGD230</font>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>				
-				<div data-role="popup" id="successAdd" class="ui-content">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
-					<h3>Item successfully added!</h3>
+				<a href="../item_details.jsp?check=true&productID=14"><img src="../products/female_bottom2.png" border="1"></a><font face="century gothic">Topshop Denim Shorts<br>SGD49</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
 				</div>
-			</div>
-		</div>
-		
-		
-	</div>	
+			</h14>
+			
+			<h7>
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+				</div>
+				<a href="../item_details.jsp?check=true&productID=12"><img src="../products/female_bag2.png" border="1"></a><font face="century gothic">Anchor Duffle Bag<br>SGD79</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
+				</div>
+				
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+				</div>
+				<a href="../item_details.jsp?check=true&productID=11"><img src="../products/female_bag1.png" border="1"></a><font face="century gothic">River Island Quilted Bag<br>SGD259</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
+				</div>
+			</h7>
+			
+			<h8>
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+				</div>
+				<a href="../item_details.jsp?check=true&productID=17"><img src="../products/female_watch1.png" border="1"></a><font face="century gothic">Marc Jacobs Watch<br>SGD155</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
+				</div>
+				
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+				</div>
+				<a href="../item_details.jsp?check=true&productID=18"><img src="../products/female_watch2.png" border="1"></a><font face="century gothic">Tommy Hilfiger Watch<br>SGD230</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
+				</div>
+			</h8>
+			
+			
+		</div>	
 
-		 
+	</div>
 	<%--For Him tab--%>
     <div id="him" class="ui-content">
     
 	<%--For Him PreferenceBar--%>
-		<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" align="center">
-			<input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a">
-			<label for="checkbox-h-6a">Tops</label>
-			<input type="checkbox" name="checkbox-h-6b" id="checkbox-h-6b">
-			<label for="checkbox-h-6b">Bottoms</label>
-			<input type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
-			<label for="checkbox-h-6c">Shoes</label>
-			<input type="checkbox" name="checkbox-h-6d" id="checkbox-h-6d">
-			<label for="checkbox-h-6d">Bags</label>
-		</fieldset>
+		<form name="him-pref-form" data-role="controlgroup" data-type="horizontal" data-mini="true" align="center">
+	     	<input type="radio" name="him-pref" id="all" value="all" checked="checked" />
+	     	<label for="all">All</label>
+	
+	     	<input type="radio" name="him-pref" id="tops" value="tops"  />
+	     	<label for="tops">Tops</label>
+	     	
+	     	<input type="radio" name="him-pref" id="bottoms" value="bottoms"  />
+	     	<label for="bottoms">Bottoms</label>
+	     	
+	     	<input type="radio" name="him-pref" id="bags" value="bags"  />
+	     	<label for="bags">Bags</label>
+	     	
+	     	<input type="radio" name="him-pref" id="watch" value="watch"  />
+	     	<label for="watch">Watch</label>
+    	</form>
 		
 	<%--For Him Products--%>
 		<br>
-		<div class="ui-grid-a">
-			<div class="ui-block-a">
-				<div class="ui-add-icon-left" style="position:absolute; right:5px;">
-					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
-				</div>
-				<img src="../products/ralph_lauren1.png" border="1"><p>Ralph Lauren Blue<br>SGD30</p>
-				
-				<div class="ui-add-icon-left" style="position:absolute; right:5px;">
+		<div class="ui-grid-solo" align="center">
+			<h9>
+				<div class="ui-add-icon" style="position:absolute;">
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
-				<img src="../products/male_watch1.png" border="1"><p>Fossil Watch<br>SGD25</p>
-				
-				<div class="ui-add-icon-left" style="position:absolute; right:5px;">
-					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
+				<a href="../item_details.jsp?check=true&productID=1"><img src="../products/ralph_lauren1.png" border="1"></a><font face="century gothic">Ralph Lauren White<br>SGD199</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
 				</div>
-				<img src="../products/male_bag1.png" border="1"><p>Herschel Black Bag<br>SGD79</p>
-				
-				<div class="ui-add-icon-left" style="position:absolute; right:5px;">
-					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
-				</div>	
-				<img src="../products/male_bottoms1.png" border="1"><p>G Star Denim Shorts<br>SGD55</p>
-				
-			</div>
-			<div class="ui-block-b">
-				<div class="ui-add-icon-right" style="position:absolute;">
-					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
+				<br>
+
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+				</div>				
+				<a href="../item_details.jsp?check=true&productID=3"><img src="../products/ralph_lauren3.png" border="1"></a><font face="century gothic">Ralph Lauren Blue<br>SGD169</font>	
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
 				</div>
-				<img src="../products/ralph_lauren3.png" border="1"><p>Ralph Lauren Green<br>SGD129</p>
-				
-				<div class="ui-add-icon-right" style="position:absolute;">
+				<br>
+			</h9>
+					
+			<h12>
+				<div class="ui-add-icon" style="position:absolute;">
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
-				<img src="../products/male_watch2.png" border="1"><p>Hugo Boss Watch<br>SGD79</p>
-				
-				<div class="ui-add-icon-right" style="position:absolute;">
-					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
+				<a href="../item_details.jsp?check=true&productID=9"><img src="../products/male_watch1.png" border="1"></a><font face="century gothic">Fossil Watch<br>SGD278</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
 				</div>
-				<img src="../products/male_bag2.png" border="1"><p>Herschel Coloured Bag<br>SGD259</p>
+				<br>
 				
-				<div class="ui-add-icon-right" style="position:absolute;">
-					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>				
-				</div>	
-				<img src="../products/male_bottoms2.png" border="1"><p>Lee 5 Red Berms<br>SGD230</p>
-				
-			</div>
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+				</div>
+				<a href="../item_details.jsp?check=true&productID=10"><img src="../products/male_watch2.png" border="1"></a><font face="century gothic">Hugo Boss Watch<br>SGD329</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
+				</div>
+			</h12>
 			
-		</div>
+			<h11>
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+				</div>
+				<a href="../item_details.jsp?check=true&productID=5"><img src="../products/male_bag1.png" border="1"></a><font face="century gothic">Herschel Black Bag<br>SGD189</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
+				</div>
+				
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+				</div>
+				<a href="../item_details.jsp?check=true&productID=6"><img src="../products/male_bag2.png" border="1"></a><font face="century gothic">Herschel Coloured Bag<br>SGD189</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
+				</div>
+			</h11>
+			
+			<h10>
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+				</div>
+				<a href="../item_details.jsp?check=true&productID=7"><img src="../products/male_bottoms1.png" border="1"></a><font face="century gothic">G Star Denim Shorts<br>SGD229</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
+				</div>
+				
+				<div class="ui-add-icon" style="position:absolute;">
+					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+				</div>
+				<a href="../item_details.jsp?check=true&productID=8"><img src="../products/male_bottoms2.png" border="1"></a><font face="century gothic">Lee 5 Red Berms<br>SGD157</font>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
+					</div>
+				</div>
+			</h10>
+		</div>	
+
 	</div>
-	
 	<%--pop up message for item added--%>
 	<div data-role="popup" id="successAdd" style="width:100px">
 		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
 		<h3>Item Added!</h3>
+	</div> 
+
+	<%--pop up message for like added--%>
+	<div data-role="popup" id="successLike" style="width:100px">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
+		<h3>Liked it!</h3>
 	</div> 
 
 </div>
