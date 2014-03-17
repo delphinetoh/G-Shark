@@ -90,6 +90,18 @@ $(document).ready(function() {
 		{
 		  display:none;
 		}
+		
+		a:link img{
+        text-decoration: none;
+		border-color: black;
+		border-width: 1px;
+		}
+
+		a:visited img{
+		text-decoration: none;
+		border-color: black;
+		border-width: 1px;
+		}
     </style>
 
 
@@ -231,6 +243,13 @@ selectedList = ProductDM.getLikesResultsBasedOnID(num);
 	</div>
 </div>
 </h11>
+
+	<%--pop up message for item added--%>
+	<div data-role="popup" id="successAdd" style="width:100px">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
+		<h3>Item Added!</h3>
+	</div> 
+
 <%--footer--%>
 <div data-role="footer" data-position="fixed">
  <div data-role="navbar">

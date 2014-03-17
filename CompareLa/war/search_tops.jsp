@@ -96,8 +96,6 @@ session.setAttribute("check","true");
 	                        <option value="uk2" selected="">UK2</option>
 	                        <option value="uk4" selected="">UK4</option>
 	                        <option value="uk6" selected="">UK6</option>
-	                        <option value="uk8" selected="">UK8</option>
-	                        <option value="uk10" selected="">UK10</option>
 	                    </select>
 	                    
 	                    <br>

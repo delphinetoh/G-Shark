@@ -139,6 +139,19 @@
         .ui-li-static.ui-collapsible > .ui-collapsible-heading > .ui-btn {
             border-top-width: 0;
         }
+        
+        a:link img{
+        text-decoration: none;
+		border-color: black;
+		border-width: 1px;
+		}
+		
+		a:visited img{
+		text-decoration: none;
+		border-color: black;
+		border-width: 1px;
+		}
+
     </style>
 
 </head>

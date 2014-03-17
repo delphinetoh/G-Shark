@@ -90,6 +90,24 @@ $(document).ready(function() {
 		{
 		  display:none;
 		}
+		
+        .ui-add-icon {
+        	position: absolute;
+			float: left;
+			left: 160px;
+        }
+
+        a:link img{
+        text-decoration: none;
+		border-color: black;
+		border-width: 1px;
+		}
+
+		a:visited img{
+		text-decoration: none;
+		border-color: black;
+		border-width: 1px;
+		}
     </style>
 
 
@@ -170,22 +188,18 @@ String[] selectedList = ProductDM.getPriceResultsBasedOnID(num);
 		if (selectedList[i] != null) {
 			Product p = ProductDM.getProductBasedOnID(selectedList[i]);
 	%>
-		<img src="<%=p.getImgRef()%>" border="1"><font face="century gothic"><%=p.getProductName()%><br>SGD<%=p.getPrice()%></font>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>				
-				<div data-role="popup" id="successAdd" class="ui-content">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
-					<h3>Item successfully added!</h3>
-				</div>
-			</div>
-		</div>
+		<div class="ui-add-icon" style="position:absolute;">
+			<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+		</div>	
+		<a href="../item_details.jsp?check=true&productID=<%=p.getProductID()%>"><img src="<%=p.getImgRef()%>" border="1"></a><font face="century gothic"><%=p.getProductName()%><br>SGD<%=p.getPrice()%></font>
+
+		<table align="center" width="80%">
+			<tr>
+			<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=p.getLikes()%></td>
+
+			<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td>
+			</tr>			
+		</table>
 		<br>
 	<%}
 	}%>
@@ -206,27 +220,37 @@ selectedList = ProductDM.getLikesResultsBasedOnID(num);
 		if (selectedList[i] != null) {
 			Product p = ProductDM.getProductBasedOnID(selectedList[i]);
 	%>
-		<img src="<%=p.getImgRef()%>" border="1"><font face="century gothic"><%=p.getProductName()%><br>SGD<%=p.getPrice()%></font>
-		<div class="ui-grid-b">
-			<div class="ui-block-a">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext">Delete</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext">Delete</a>				
-			</div>
-			<div class="ui-block-c">
-				<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext">Add</a>				
-				<div data-role="popup" id="successAdd" class="ui-content">
-					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
-					<h3>Item successfully added!</h3>
-				</div>
-			</div>
-		</div>
+		<div class="ui-add-icon" style="position:absolute;">
+			<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
+		</div>	
+		<a href="../item_details.jsp?check=true&productID=<%=p.getProductID()%>"><img src="<%=p.getImgRef()%>" border="1"></a><font face="century gothic"><%=p.getProductName()%><br>SGD<%=p.getPrice()%></font>
+
+		<table align="center" width="80%">
+			<tr>
+			<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=p.getLikes()%></td>
+
+			<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td>
+			</tr>			
+		</table>
+				
+			
 		<br>
 	<%}
 	}%>
 </div>
 </h11>
+
+	<%--pop up message for item added--%>
+	<div data-role="popup" id="successAdd" style="width:100px">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
+		<h3>Item Added!</h3>
+	</div> 
+
+	<%--pop up message for like added--%>
+	<div data-role="popup" id="successLike" style="width:100px">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right" >Close</a>
+		<h3>Liked it!</h3>
+	</div>
 
 <%--footer--%>
 <div data-role="footer" data-position="fixed">

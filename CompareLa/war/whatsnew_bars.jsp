@@ -1,3 +1,4 @@
+<%@ page import="datamanager.*,entity.*,java.util.*" %>
 
 <!DOCTYPE html>
 <html>
@@ -145,6 +146,18 @@
 			float: left;
 			left: 265px;
         }
+
+        a:link img{
+        text-decoration: none;
+		border-color: black;
+		border-width: 1px;
+		}
+
+		a:visited img{
+		text-decoration: none;
+		border-color: black;
+		border-width: 1px;
+		}
     </style>
 
 </head>
@@ -199,6 +212,9 @@ if (check != null && check.equals("true")) {
 		</form>
 
 	<%--For Her Products--%>
+
+		
+
 		<br>
 		<div class="ui-grid-solo" align="center">
 			<h13>
@@ -206,28 +222,26 @@ if (check != null && check.equals("true")) {
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=15"><img src="../products/female_top1.png" border="1"></a><font face="century gothic">Mango Cardigan<br>SGD25</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("15").getLikes()%></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td>
+					</tr>			
+				</table>
 				<br>
 				
 				<div class="ui-add-icon" style="position:absolute;">
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=16"><img src="../products/female_top2.png" border="1"></a><font face="century gothic">ASOS Tshirt in Stripes<br>SGD30</font>		
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("16").getLikes()%></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td>
+					</tr>			
+				</table>
 				<br>
 			</h13>
 					
@@ -236,28 +250,26 @@ if (check != null && check.equals("true")) {
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=13"><img src="../products/female_bottom1.png" border="1"></a><font face="century gothic">Levi's Jeans<br>SGD129</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("13").getLikes()%></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td>
+					</tr>			
+				</table>
 				<br>
 				
 				<div class="ui-add-icon" style="position:absolute;">
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=14"><img src="../products/female_bottom2.png" border="1"></a><font face="century gothic">Topshop Denim Shorts<br>SGD49</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("14").getLikes()%></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td>
+					</tr>			
+				</table>
 			</h14>
 			
 			<h7>
@@ -265,27 +277,25 @@ if (check != null && check.equals("true")) {
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=12"><img src="../products/female_bag2.png" border="1"></a><font face="century gothic">Anchor Duffle Bag<br>SGD79</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("12").getLikes()%></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td>
+					</tr>			
+				</table>
 				
 				<div class="ui-add-icon" style="position:absolute;">
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=11"><img src="../products/female_bag1.png" border="1"></a><font face="century gothic">River Island Quilted Bag<br>SGD259</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("11").getLikes()%></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td>
+					</tr>			
+				</table>
 			</h7>
 			
 			<h8>
@@ -293,27 +303,25 @@ if (check != null && check.equals("true")) {
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=17"><img src="../products/female_watch1.png" border="1"></a><font face="century gothic">Marc Jacobs Watch<br>SGD155</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("17").getLikes()%></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td>
+					</tr>			
+				</table>
 				
 				<div class="ui-add-icon" style="position:absolute;">
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=18"><img src="../products/female_watch2.png" border="1"></a><font face="century gothic">Tommy Hilfiger Watch<br>SGD230</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("18").getLikes()%></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td>
+					</tr>			
+				</table>
 			</h8>
 			
 			
@@ -349,28 +357,26 @@ if (check != null && check.equals("true")) {
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=1"><img src="../products/ralph_lauren1.png" border="1"></a><font face="century gothic">Ralph Lauren White<br>SGD199</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("1").getLikes()%></td></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td></td>
+					</tr>			
+				</table>
 				<br>
 
 				<div class="ui-add-icon" style="position:absolute;">
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>				
 				<a href="../item_details.jsp?check=true&productID=3"><img src="../products/ralph_lauren3.png" border="1"></a><font face="century gothic">Ralph Lauren Blue<br>SGD169</font>	
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("3").getLikes()%></td></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td></td>
+					</tr>			
+				</table>
 				<br>
 			</h9>
 					
@@ -379,28 +385,26 @@ if (check != null && check.equals("true")) {
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=9"><img src="../products/male_watch1.png" border="1"></a><font face="century gothic">Fossil Watch<br>SGD278</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("9").getLikes()%></td></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td></td>
+					</tr>			
+				</table>
 				<br>
 				
 				<div class="ui-add-icon" style="position:absolute;">
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=10"><img src="../products/male_watch2.png" border="1"></a><font face="century gothic">Hugo Boss Watch<br>SGD329</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("10").getLikes()%></td></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td></td>
+					</tr>			
+				</table>
 			</h12>
 			
 			<h11>
@@ -408,27 +412,25 @@ if (check != null && check.equals("true")) {
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=5"><img src="../products/male_bag1.png" border="1"></a><font face="century gothic">Herschel Black Bag<br>SGD189</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("5").getLikes()%></td></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td></td>
+					</tr>			
+				</table>
 				
 				<div class="ui-add-icon" style="position:absolute;">
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=6"><img src="../products/male_bag2.png" border="1"></a><font face="century gothic">Herschel Coloured Bag<br>SGD189</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("6").getLikes()%></td></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td></td>
+					</tr>			
+				</table>
 			</h11>
 			
 			<h10>
@@ -436,27 +438,25 @@ if (check != null && check.equals("true")) {
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=7"><img src="../products/male_bottoms1.png" border="1"></a><font face="century gothic">G Star Denim Shorts<br>SGD229</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("7").getLikes()%></td></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td></td>
+					</tr>			
+				</table>
 				
 				<div class="ui-add-icon" style="position:absolute;">
 					<a href="#successAdd" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext"></a>			
 				</div>
 				<a href="../item_details.jsp?check=true&productID=8"><img src="../products/male_bottoms2.png" border="1"></a><font face="century gothic">Lee 5 Red Berms<br>SGD157</font>
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-						<a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a>
-					</div>
-					<div class="ui-block-b">
-						<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a>				
-					</div>
-				</div>
+				<table align="center" width="80%">
+					<tr>
+					<td width="20%" align="right"><a href="#successLike" data-rel="popup" data-transition="pop" class="ui-btn ui-shadow ui-corner-all ui-icon-heart ui-btn-icon-notext"></a><td width="20%"><%=ProductDM.getProductBasedOnID("8").getLikes()%></td></td>
+		
+					<td width="4%"><a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-comment ui-btn-icon-notext"></a><td width="20%">See reviews</td></td>
+					</tr>			
+				</table>
 			</h10>
 		</div>	
 
